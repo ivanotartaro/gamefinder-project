@@ -1,0 +1,219 @@
+body{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo', sans-serif;
+    
+    --base-color: #fff;
+    
+    
+}
+
+#login-page{
+    background-image: url("../assets/img/background-darkmode.png");
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    margin: 0;
+	padding: 0;
+	width: 1494px;
+	height: 1062px;
+	left: 0px;
+	top: 0px;
+}
+
+
+.logo-gamefinder{
+    margin: 2em 0 0 2em;
+
+}
+
+.login-container{
+    
+    position: absolute;
+	width: 462px;
+	height: 702px;
+	left: 932px;
+	top: 178px;
+    border-radius: 12px;
+    color: var(--base-color);
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    align-items: center;
+	font-family: 'Exo';
+	
+    
+}
+
+.login-container h2{
+
+    margin: 40px 50px 8px 50px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 27px;
+	  
+}
+
+.login-container h3{
+    height: 28px;
+	left: 982px;
+	top: 253px;
+
+	
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 21px;
+	   
+}
+
+.email{
+    
+    background: #FFFFFF;
+    border-radius: 4px;
+    margin: 32px 50px 16px 50px;
+    height: 47px;
+    width: 362px;
+    
+    
+}
+.email input{
+    
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    border: 0;
+    color: #939393;
+    height: 25.85px;
+    width: 330px;
+    margin: 10.58px 16px 10.57px 0px;
+    outline: 0px;
+}
+
+.password{
+    
+    background: #FFFFFF;
+    border-radius: 4px;
+    margin: 16px 50px 13px 50px;
+    height: 47px;
+    width: 362px;
+    
+}
+
+.password input{
+
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    border: 0;
+    color: #939393;
+    height: 25.85px;
+    width: 306px;
+    margin: 10.58px 60px 10.57px 0px;
+    outline: 0px;
+}
+
+.password img{
+    width: 21.69px;
+    height: 16px;
+    margin-left: -45px;
+    cursor: pointer;
+    
+}
+
+.checkbox-box{
+
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    width: 362px;  
+    display: inline-block;
+    
+  
+}
+
+.checkbox-box input{
+    border: 1.5px solid #FFFFFF;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+    /* margin: 0px 0px 0px 0px; */
+    accent-color: #5FE19B;
+    background: #fff;
+    margin-left: -1px;
+}
+
+
+.checkbox-text{
+    margin: 0px 105.36px 24px 6px;
+ 
+    
+
+}
+
+.checkbox-box .link-color{
+    top: 16px;
+    margin-left: 8px;
+}
+
+.link-color{
+    text-decoration: none;
+    color: #5FE19B;
+}
+
+.login-button{
+    
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    display: inline-block;
+    text-align: center;
+
+    color: #FFFFFF;
+    background-color: #5FE19B;
+
+    Width: 362px;
+    Height: 47px;
+
+    margin: 24px 50px 32px 50px;
+    border-radius: 6px;
+}
+
+.register{
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    margin: 0px 0px 24px 0px;
+
+}
+
+.division{
+    
+}
+
+.division-one{
+    width: 147.44px;
+    border: 1px solid #FFFFFF;
+    
+
+}
+
+.division-two{
+    width: 147.44px;
+    border: 1px solid #FFFFFF;
+    
+
+}
