@@ -201,19 +201,68 @@ body{
 }
 
 .division{
-    
+    display: flex;
+    justify-content: space-around;
+}
+
+.division-one, .division-two{
+    width: 147.44px;
+    height: 1px;
+    /* border-top: 1px; */
+    border: #FFFFFF;
+    /* border: 1px solid #FFFFFF; */
+    background-color: #FFFFFF;
+
 }
 
 .division-one{
-    width: 147.44px;
-    border: 1px solid #FFFFFF;
+    margin: 10px 0px 35px 40px;
+}
+
+.division-two{
+    margin: 10px 40px 35px 0px;
+}
+.division a{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.login-apps{
+    display: grid;
     
 
 }
 
-.division-two{
-    width: 147.44px;
-    border: 1px solid #FFFFFF;
-    
+.login-fb, .login-tw, .login-go{
+    width: 362px;
+    height: 47px;
+    border-radius: 6px;
+    margin: 5px 50px 8px 50px;
+    border: 2px solid #FFFFFF;
 
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+
+    background-color: inherit;
+    color: #FFFFFF;
+    
+}
+
+.fb-icon{
+    width: 20px;
+    height: 20px;
+}
+
+.tw-icon{
+    width: 20px;
+    height: 20px;
+}
+
+.go-icon{
+    width: 18px;
+    height: 18px;
 }
