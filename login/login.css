@@ -110,23 +110,27 @@ body{
     font-weight: 400;
     font-size: 14px;
     width: 362px;  
-    display: inline-block;
+    margin: 16px 50px 13px 50px;
+    display: flex;
+    align-items: center;
 }
 
-            /* Checkbox doesn't work properly */
+            /* Checkbox doesn't work properly
+            UPDATE: OR MAYBE IT DOES */
 
-/* input[type="checkbox"]{
+input[type="checkbox"]{
     appearance: none;
     -webkit-appearance: none;
     border: 1.5px solid #FFFFFF;
     border-radius: 4px;
     width: 20px;
     height: 20px;
-    background-color: #fff;
-    margin-left: -1px;
+    background-color: inherit;
+    margin-left: 1px;
     cursor: pointer;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 input[type="checkbox"]:after{
@@ -144,27 +148,28 @@ input[type="checkbox"]:checked{
 
 input[type="checkbox"]:checked:after{
     display: block;
-} */
+}
 
-input[type="checkbox"]{
+/* input[type="checkbox"]{
     border: 1.5px solid #FFFFFF;
     border-radius: 4px;
     width: 20px;
     height: 20px;
     accent-color: #5FE19B;
-    margin-left: -1px;
+    margin-left: 1px;
     cursor: pointer;
-}
+} */
 
 .checkbox-box label{
-    margin: 0px 105.36px 24px 6px;
     cursor: pointer;
+    margin: 4px 0px 0px 16px;
 }
 
 .link-color{
     text-decoration: none;
     color: #5FE19B;
-    margin-left: 5px;
+    margin-left: auto;
+    margin-top: auto;
 }
 
 .login-button{
@@ -178,8 +183,9 @@ input[type="checkbox"]{
     background-color: #5FE19B;
     Width: 362px;
     Height: 47px;
-    margin: 24px 50px 32px 50px;
+    margin: 5px 50px 32px 50px;
     border-radius: 6px;
+    cursor: pointer;
 }
 
 .register{
@@ -187,7 +193,11 @@ input[type="checkbox"]{
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
-    margin: 0px 0px 24px 0px;
+    margin: -8px 0px 24px 0px;
+}
+
+.register .link-color{
+    margin-left: 5px;
 }
 
 .division{
@@ -218,7 +228,7 @@ input[type="checkbox"]{
 .login-apps{
     display: grid;
     margin: 0px 50px 0px 50px; 
-    justify-content: space-around;
+    
 }
 
 .login-fb, .login-tw, .login-go{
