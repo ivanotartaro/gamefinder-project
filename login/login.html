@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Game Finder</title>
 </head>
 <body>
@@ -25,34 +26,34 @@
                     <img src="../assets/img/see-password.svg" alt="See password">
                 </div>
                 <div class="checkbox-box">
-                    <input type="checkbox"> 
-                    <a class="checkbox-text">Remember me</a>
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label> 
                     <a class="link-color" href="#">Forgot password?</a>
                 </div>  
-            </form>   
-            <button class="login-button">Log In</button>
+                <input class="login-button" type="submit" value="Log In">       
+            </form>
             <div class="register">
-                <a>Not registered yet?</a>
+                Not registered yet?
                 <a class="link-color" href="#">Register now</a> 
             </div>
             <div class="division">
                 <div class="division-one"></div>
-                <a>or</a>
+                or
                 <div class="division-two"></div>
             </div>
             <div class="login-apps">
-                <button class="login-fb">
+                <a class="login-fb">
                     <img class="fb-icon" src="../assets/img/facebook-icon.svg" alt="Facebook">
-                    Login with Facebook
-                </button>
-                <button class="login-tw">
+                    <span>Login with Facebook</span>
+                </a>
+                <a class="login-tw">
                     <img class="tw-icon" src="../assets/img/twitter-icon.svg" alt="Twitter">
-                    Login with Twitter
-                </button>
-                <button class="login-go">
+                    <span>Login with Twitter</span>
+                </a>
+                <a class="login-go">
                     <img class="go-icon" src="../assets/img/google-icon.svg" alt="Google">
-                    Login with Google
-                </button>
+                    <span>Login with Google</span>
+                </a>
                 
 
             </div>

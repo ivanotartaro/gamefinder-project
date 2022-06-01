@@ -4,9 +4,7 @@ body{
     padding: 0;
     font-family: 'Exo', sans-serif;
     
-    --base-color: #fff;
-    
-    
+    --base-color: #fff;  
 }
 
 #login-page{
@@ -24,16 +22,13 @@ body{
 	top: 0px;
 }
 
-
 .logo-gamefinder{
     margin: 2em 0 0 2em;
-
 }
 
 .login-container{
-    
     position: absolute;
-	width: 462px;
+    width: 462px;
 	height: 702px;
 	left: 932px;
 	top: 178px;
@@ -41,48 +36,35 @@ body{
     color: var(--base-color);
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
-    align-items: center;
-	font-family: 'Exo';
-	
-    
+    align-items: center; 
 }
 
 .login-container h2{
-
     margin: 40px 50px 8px 50px;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 20px;
-	line-height: 27px;
-	  
+	line-height: 27px;  
 }
 
 .login-container h3{
     height: 28px;
 	left: 982px;
 	top: 253px;
-
-	
 	font-style: normal;
 	font-weight: 400;
 	font-size: 16px;
-	line-height: 21px;
-	   
+	line-height: 21px; 
 }
 
 .email{
-    
     background: #FFFFFF;
     border-radius: 4px;
     margin: 32px 50px 16px 50px;
     height: 47px;
     width: 362px;
-    
-    
 }
 .email input{
-    
-    
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -96,18 +78,14 @@ body{
 }
 
 .password{
-    
     background: #FFFFFF;
     border-radius: 4px;
     margin: 16px 50px 13px 50px;
     height: 47px;
-    width: 362px;
-    
+    width: 362px; 
 }
 
 .password input{
-
-    
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -124,80 +102,92 @@ body{
     width: 21.69px;
     height: 16px;
     margin-left: -45px;
-    cursor: pointer;
-    
+    cursor: pointer; 
 }
 
-.checkbox-box{
-
-    
+.checkbox-box{ 
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 19px;
     width: 362px;  
     display: inline-block;
-    
-  
 }
 
-.checkbox-box input{
+            /* Checkbox doesn't work properly */
+
+/* input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
     border: 1.5px solid #FFFFFF;
     border-radius: 4px;
     width: 20px;
     height: 20px;
-    /* margin: 0px 0px 0px 0px; */
-    accent-color: #5FE19B;
-    background: #fff;
+    background-color: #fff;
     margin-left: -1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
 }
 
+input[type="checkbox"]:after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 15px;
+    color: #fff;
+    display: none;
+}
 
-.checkbox-text{
+input[type="checkbox"]:checked{
+    background-color: #5FE19B;
+}
+
+input[type="checkbox"]:checked:after{
+    display: block;
+} */
+
+input[type="checkbox"]{
+    border: 1.5px solid #FFFFFF;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+    accent-color: #5FE19B;
+    margin-left: -1px;
+    cursor: pointer;
+}
+
+.checkbox-box label{
     margin: 0px 105.36px 24px 6px;
- 
-    
-
-}
-
-.checkbox-box .link-color{
-    top: 16px;
-    margin-left: 8px;
+    cursor: pointer;
 }
 
 .link-color{
     text-decoration: none;
     color: #5FE19B;
+    margin-left: 5px;
 }
 
 .login-button{
-    
-    font-family: 'Exo';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
     display: inline-block;
     text-align: center;
-
     color: #FFFFFF;
     background-color: #5FE19B;
-
     Width: 362px;
     Height: 47px;
-
     margin: 24px 50px 32px 50px;
     border-radius: 6px;
 }
 
 .register{
-    
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
     margin: 0px 0px 24px 0px;
-
 }
 
 .division{
@@ -208,11 +198,8 @@ body{
 .division-one, .division-two{
     width: 147.44px;
     height: 1px;
-    /* border-top: 1px; */
     border: #FFFFFF;
-    /* border: 1px solid #FFFFFF; */
     background-color: #FFFFFF;
-
 }
 
 .division-one{
@@ -230,39 +217,46 @@ body{
 
 .login-apps{
     display: grid;
-    
-
+    margin: 0px 50px 0px 50px; 
+    justify-content: space-around;
 }
 
 .login-fb, .login-tw, .login-go{
     width: 362px;
     height: 47px;
     border-radius: 6px;
-    margin: 5px 50px 8px 50px;
     border: 2px solid #FFFFFF;
-
-    font-family: 'Exo';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
-
     background-color: inherit;
     color: #FFFFFF;
-    
+    cursor: pointer;
+}
+
+.login-tw, .login-go{
+    margin: 18px 0px 0px 0px;
+}
+
+.login-apps span{
+    margin: 14px 40px 0px 0px;
 }
 
 .fb-icon{
     width: 20px;
     height: 20px;
+    margin: 12px 14px 0px 0px;
 }
 
 .tw-icon{
     width: 20px;
     height: 20px;
+    margin: 12px 32px 0px 0px;          
 }
 
 .go-icon{
     width: 18px;
     height: 18px;
+    margin: 12px 32px 0px 0px;
 }
