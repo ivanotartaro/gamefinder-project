@@ -249,24 +249,23 @@ input[type="checkbox"]:checked:after{
     margin: 18px 0px 0px 0px;
 }
 
-.login-apps span{
-    margin: 14px 40px 0px 0px;
-}
-
 .fb-icon{
     width: 20px;
     height: 20px;
-    margin: 12px 14px 0px 0px;
+    margin: 13px 14px 0px 0px;
+
 }
 
 .tw-icon{
     width: 20px;
     height: 20px;
-    margin: 12px 32px 0px 0px;          
+    margin: 13px 23px 0px 0px;
+    margin-left: -10px;          
 }
 
 .go-icon{
     width: 18px;
     height: 18px;
-    margin: 12px 32px 0px 0px;
+    margin: 13px 24px 0px 0px;
+    margin-left: -10px;
 }
