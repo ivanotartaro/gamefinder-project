@@ -1,0 +1,184 @@
+body{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo', sans-serif;
+    
+    --base-color: #fff;
+    --input-color: #939393;
+    --link-txt-color: #5FE19B;  
+}
+
+#main-page{
+    background-color: #151515;
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    margin: 0;
+	padding: 0;
+	width: 1440px;
+	height: 1024px;
+	left: 0px;
+	top: 0px;
+}
+
+.main-menu{
+    width: 1440px;
+    height: 94px;
+    background: linear-gradient(180deg, #5FE19B 0%, #36B972 50%, #0EA152 100%);
+    box-shadow: 1px -3px 36px rgba(0, 0, 0, 0.5);
+    align-items: center;
+    position: relative;
+    display: flex;
+
+
+    
+}
+
+.logo-gamefinder{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 2em 0 0 2em;
+    width: 167px;
+    height: 32px;
+}
+
+.search-bar{
+    position: absolute;
+    width: 362px;
+    height: 47px;
+    background-color: #fff;
+    border-radius: 4px;
+    align-items: center;
+    top: 0px;
+    margin: 1.5em 0 0 32em;
+
+}
+
+.search-bar input{
+    outline: 0px;
+    border: 0px;
+    position: absolute;
+    width: 314px;
+    height: 25.85px;
+    left: 40px;
+    top: calc(50% - 25.85px/2 + 0px);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #939393;
+}
+
+.search-bar img{
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: calc(50% - 25.85px/2 + 3px);
+    left: 11px;
+    cursor: pointer;
+}
+
+.account{
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 1352px;
+    top: 23px;
+    text-decoration: none;
+}
+
+.account-menu{
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 1352px;
+    top: 23px;
+    
+}
+
+.account-box{
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    background: #C4C4C4;
+    border: 2px solid #FFFFFF;
+
+    border-radius: 100%;
+}
+
+.account a{
+    color: #FFFFFF;
+    margin-left: -75px;
+    margin-top: -22px;
+    position: absolute;
+    width: 66px;
+    height: 39px;
+    text-decoration: none;
+    top: 27px;
+
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+}
+
+.other{
+    width: 1440px;
+    height: 120px;
+    position: absolute;
+}
+
+.other h1{
+    margin-left: 31px;
+    margin-top: 10px;
+    
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 64px;
+
+    color: #FFFFFF;
+
+    
+
+}
+
+.other p{
+    margin-left: 33px;
+    margin-top: -25px;
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.nav-menu{
+    position: absolute;
+    color: #FFFFFF;
+    background-color: red;
+    height: 650px;
+    width: 260px;
+    margin-top: 200px;
+
+}
+
+.nav-menu ul{
+    list-style-type: none;
+}

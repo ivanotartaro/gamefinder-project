@@ -4,7 +4,9 @@ body{
     padding: 0;
     font-family: 'Exo', sans-serif;
     
-    --base-color: #fff;  
+    --base-color: #fff;
+    --input-color: #939393;
+    --link-txt-color: #5FE19B;  
 }
 
 #login-page{
@@ -16,10 +18,8 @@ body{
     overflow: hidden;
     margin: 0;
 	padding: 0;
-	width: 1494px;
-	height: 1062px;
-	left: 0px;
-	top: 0px;
+	width: 1440px;
+	height: 1024px;
 }
 
 .logo-gamefinder{
@@ -70,7 +70,7 @@ body{
     font-size: 15px;
     line-height: 20px;
     border: 0;
-    color: #939393;
+    color: var(--input-color);
     height: 25.85px;
     width: 330px;
     margin: 10.58px 16px 10.57px 0px;
@@ -91,7 +91,7 @@ body{
     font-size: 15px;
     line-height: 20px;
     border: 0;
-    color: #939393;
+    color: var(--input-color);
     height: 25.85px;
     width: 306px;
     margin: 10.58px 60px 10.57px 0px;
@@ -150,16 +150,6 @@ input[type="checkbox"]:checked:after{
     display: block;
 }
 
-/* input[type="checkbox"]{
-    border: 1.5px solid #FFFFFF;
-    border-radius: 4px;
-    width: 20px;
-    height: 20px;
-    accent-color: #5FE19B;
-    margin-left: 1px;
-    cursor: pointer;
-} */
-
 .checkbox-box label{
     cursor: pointer;
     margin: 4px 0px 0px 16px;
@@ -167,7 +157,7 @@ input[type="checkbox"]:checked:after{
 
 .link-color{
     text-decoration: none;
-    color: #5FE19B;
+    color: var(--link-txt-color);
     margin-left: auto;
     margin-top: auto;
 }
@@ -269,3 +259,5 @@ input[type="checkbox"]:checked:after{
     margin: 13px 24px 0px 0px;
     margin-left: -10px;
 }
+
+/* Updated 05/06/2022 */
