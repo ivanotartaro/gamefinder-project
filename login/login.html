@@ -9,10 +9,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script type="text/javascript" src="carousel.js"></script>
     <title>Game Finder</title>
 </head>
 <body>
     <div id="login-page">
+        <div class="backgrounds">
+            <div class="background">
+                <img src="../assets/img/background-darkmode.png" alt="background-1" />
+            </div>
+            <div class="background">
+                <img src="../assets/img/background-darkmode-2.png" alt="background-2" />
+            </div>
+            <div class="background">
+                <img src="../assets/img/background-darkmode-3.png" alt="background-2" />
+            </div>
+        </div>
+
+        <button id="btn-next" class="btn btn-next">></button>
+        <button id="btn-previous" class="btn btn-prev"><</button>
+
+        <div class="background-pagination">
+            <div class="pagination-dot active"></div>
+            <div class="pagination-dot"></div>
+            <div class="pagination-dot"></div>
+        </div>
+
+
         <img class="logo-gamefinder" src="../assets/img/logo-darkmode.svg" alt="Game Finder"/>
         <div class="login-container">
             <h2>Welcome! Log in or register</h2>
@@ -54,8 +77,6 @@
                     <img class="go-icon" src="../assets/img/google-icon.svg" alt="Google">
                     <span>Login with Google</span>
                 </a>
-                
-
             </div>
         </div>
     </div>

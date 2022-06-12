@@ -198,6 +198,10 @@ body{
     line-height: 27px;
 }
 
+.normal-txt{
+    margin-top: 3px;
+}
+
 a:hover{
     color: #5FE19B;
 }
@@ -226,6 +230,7 @@ a:focus{
 }
 
 
+/*
 .small-card{
     height: 314px;
     width: 350px;
@@ -234,7 +239,7 @@ a:focus{
     margin: 5px;
     position: relative;
     display: inline-block;
-    
+
 }
 
 .small-card-image{
@@ -242,9 +247,9 @@ a:focus{
     border-top-left-radius: 12px;
     display: block;
     height: 60%;
-    
-    
-    
+
+
+
 }
 
 .small-card-image img {
@@ -252,4 +257,113 @@ a:focus{
     border-top-right-radius: 12px;
     border-top-left-radius: 12px;
     width: 350px;
+}
+*/
+.small-card{
+    height: 314px;
+    width: 363px;
+    border-radius: 12px;
+    background-color: #303030;
+    margin: 5px;
+    position: relative;
+    display: inline-block;
+
+}
+
+.small-card-image{
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    display: block;
+    /*width: 363px;
+    height: 60%;*/
+    width: 363px;
+    height: 179px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-image: url(../assets/img/screen.png);*/
+
+
+
+}
+
+.small-card-image img {
+    height: 100%;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    width: 350px;
+}
+
+.small-card-fav{
+    margin: 12px 0 0 90.5%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.small-card-bot{
+    display: inline-block;
+}
+
+.game-title{
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+
+    margin: 5px 0 20px 16px;
+}
+
+.small-card-ranking{
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+
+    color: #36B972;
+    margin: -46px 0 0 325px;
+}
+
+.release, .genres{
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    margin: 13px 0 0 16px;
+
+    color: #939393;
+
+}
+
+.release{
+    margin-top: 30px;
+}
+
+.release-date, .genres-txt{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+
+    margin: -18px 0 0 145px;
+}
+
+.platform-container{
+    height: 80px;
+    width: 120px;
+    /* background-color: #FFFFFF; */
+    margin-left: 230px;
+    margin-top: -70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 13px;
+}
+
+.platform-container svg{
+    margin: 11px 20px 0 0;
 }

@@ -9,8 +9,7 @@ body{
     --link-txt-color: #5FE19B;  
 }
 
-#login-page{
-    background-image: url("../assets/img/background-darkmode.png");
+/* .login-page{
     min-height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -18,19 +17,22 @@ body{
     overflow: hidden;
     margin: 0;
 	padding: 0;
-	width: 1440px;
+	width: 100%;
 	height: 1024px;
-}
+} */
 
 .logo-gamefinder{
+    position: absolute;
+    top: 10px;
     margin: 2em 0 0 2em;
+
 }
 
 .login-container{
     position: absolute;
     width: 462px;
 	height: 702px;
-	left: 932px;
+	right: 150px;
 	top: 178px;
     border-radius: 12px;
     color: var(--base-color);
@@ -73,8 +75,8 @@ body{
     color: var(--input-color);
     height: 25.85px;
     width: 330px;
-    margin: 10.58px 16px 10.57px 0px;
-    outline: 0px;
+    margin: 10.58px 16px 10.57px 0;
+    outline: 0;
 }
 
 .password{
@@ -94,8 +96,8 @@ body{
     color: var(--input-color);
     height: 25.85px;
     width: 306px;
-    margin: 10.58px 60px 10.57px 0px;
-    outline: 0px;
+    margin: 10.58px 60px 10.57px 0;
+    outline: 0;
 }
 
 .password img{
@@ -114,9 +116,6 @@ body{
     display: flex;
     align-items: center;
 }
-
-            /* Checkbox doesn't work properly
-            UPDATE: OR MAYBE IT DOES */
 
 input[type="checkbox"]{
     appearance: none;
@@ -152,7 +151,7 @@ input[type="checkbox"]:checked:after{
 
 .checkbox-box label{
     cursor: pointer;
-    margin: 4px 0px 0px 16px;
+    margin: 4px 0 0 16px;
 }
 
 .link-color{
@@ -183,7 +182,7 @@ input[type="checkbox"]:checked:after{
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
-    margin: -8px 0px 24px 0px;
+    margin: -8px 0 24px 0;
 }
 
 .register .link-color{
@@ -203,11 +202,11 @@ input[type="checkbox"]:checked:after{
 }
 
 .division-one{
-    margin: 10px 0px 35px 40px;
+    margin: 10px 0 35px 40px;
 }
 
 .division-two{
-    margin: 10px 40px 35px 0px;
+    margin: 10px 40px 35px 0;
 }
 .division a{
     font-weight: 400;
@@ -217,7 +216,7 @@ input[type="checkbox"]:checked:after{
 
 .login-apps{
     display: grid;
-    margin: 0px 50px 0px 50px; 
+    margin: 0 50px 0 50px; 
     
 }
 
@@ -236,28 +235,116 @@ input[type="checkbox"]:checked:after{
 }
 
 .login-tw, .login-go{
-    margin: 18px 0px 0px 0px;
+    margin: 18px 0 0 0;
 }
 
 .fb-icon{
     width: 20px;
     height: 20px;
-    margin: 13px 14px 0px 0px;
+    margin: 13px 14px 0 0;
 
 }
 
 .tw-icon{
     width: 20px;
     height: 20px;
-    margin: 13px 23px 0px 0px;
+    margin: 13px 23px 0 0;
     margin-left: -10px;          
 }
 
 .go-icon{
     width: 18px;
     height: 18px;
-    margin: 13px 24px 0px 0px;
-    margin-left: -10px;
+    margin: 13px 24px 0 -10px;
 }
 
 /* Updated 05/06/2022 */
+
+
+/* Carousel */
+.btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10;
+    cursor: pointer;
+    background-color: #515151;
+    color: white;
+    font-size: 18px;
+}
+
+.btn:active {
+    transform: scale(1.1);
+}
+
+.btn-prev {
+    top: 32%;
+    left: 2%;
+}
+
+.btn-next {
+    top: 32%;
+    right: 2%;
+}
+
+.backgrounds {
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+  
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+.background > img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.background-pagination {
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    left: 660px;
+    bottom: 100px;
+    text-align: center;
+    width: 120px;
+    height: 27px;
+    border-radius: 18px;
+    background-color: #515151;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pagination-dot {
+    height: 7px;
+    width: 7px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.25;
+    cursor: pointer;
+}
+
+.pagination-dot.active {
+    opacity: 1;
+}
+
+
