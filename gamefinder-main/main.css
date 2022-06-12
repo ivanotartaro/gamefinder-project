@@ -213,15 +213,12 @@ a:focus{
 .container{
     height: 100%;
     width: 84%;
-    /* display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap; */
     display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 5px;
     overflow: hidden;
     margin-top: 20px;
-    margin-left: 100px;
+    
 }
 
 .wrapper {
