@@ -65,6 +65,8 @@ body{
     margin: 32px 50px 16px 50px;
     height: 47px;
     width: 362px;
+    
+    
 }
 .email input{
     font-style: normal;
@@ -77,6 +79,7 @@ body{
     width: 330px;
     margin: 10.58px 16px 10.57px 0;
     outline: 0;
+    
 }
 
 .password{
@@ -175,6 +178,10 @@ input[type="checkbox"]:checked:after{
     margin: 5px 50px 32px 50px;
     border-radius: 6px;
     cursor: pointer;
+}
+
+.login-button:hover{
+    background-color: #4CC986;
 }
 
 .register{
