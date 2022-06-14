@@ -1,3 +1,52 @@
+/* ************** VALIDATION ***************** */
+
+const regexpMail = '^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$';
+let showPassword = false;
+
+window.onload = function(){
+    const form = document.getElementById('form');
+    form.addEventListener('submit', processSubmit);
+
+    document.getElementsByName("mail")[0].addEventListener('keyup', () => {
+        const mail = document.getElementsByName("mail")[0].value;
+
+        if (mail) {
+            if (!mail.match(regexpMail)) {
+                document.getElementById("email-wrapper").setAttribute("style", "border: 2px solid red;");
+            } else {
+                document.getElementById("email-wrapper").setAttribute("style", "border: 2px solid green;");
+            }
+        } else {
+            document.getElementById("email-wrapper").removeAttribute("style");
+        }
+    });
+
+    document.getElementById("see-password").addEventListener('click', () => {
+        const fieldPassword = document.getElementsByName("password")[0];
+        const seePasswordImg = document.getElementById("see-password");
+
+        if (showPassword) {
+            fieldPassword.setAttribute("type", "password");
+            seePasswordImg.setAttribute("src", "../assets/img/see-password.svg");
+        } else {
+            fieldPassword.setAttribute("type", "text");
+            seePasswordImg.setAttribute("src", "../assets/img/hide-password.svg");
+        }
+
+        showPassword = !showPassword;
+    });
+};
+
+function processSubmit(event) {
+    event.preventDefault();
+
+
+}
+
+
+/* ************** CARROUSEL ***************** */
+
+
 const ACTION_NEXT_BACKGROUND = 'NEXT';
 const ACTION_PREVIOUS_BACKGROUND = 'PREVIOUS';
 let currentBackgroundIndex = 0;

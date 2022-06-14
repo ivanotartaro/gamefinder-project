@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <script type="text/javascript" src="carousel.js"></script>
+    <script type="text/javascript" src="login.js"></script>
     <title>Game Finder</title>
 </head>
 <body>
@@ -40,13 +40,13 @@
         <div class="login-container">
             <h2>Welcome! Log in or register</h2>
             <h3>Log in to find the games you're looking for!</h3>
-            <form>
-                <div class="email">
-                    <input type="email" placeholder="Email">
+            <form id="form">
+                <div id="email-wrapper" class="email">
+                    <input name="mail" type="text" placeholder="Email" required>
                 </div>
                 <div class="password">
-                    <input type="password" placeholder="Password">
-                    <img src="../assets/img/see-password.svg" alt="See password">
+                    <input name="password" type="password" placeholder="Password">
+                    <img id="see-password" src="../assets/img/see-password.svg" alt="See password">
                 </div>
                 <div class="checkbox-box">
                     <input type="checkbox" id="remember" name="remember">
