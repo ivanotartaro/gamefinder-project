@@ -16,24 +16,28 @@
 
 <body>
     <div id="main-page">
-        <header>    
-            <div class="main-menu">
-                <img class="logo-gamefinder" src="../assets/img/logo-darkmode.svg" alt="Game Finder">
-                <div class="search-bar">
-                    <img class="search-icon" src="../assets/img/search.svg" alt="search">
-                    <input type="text" placeholder="Search games...">
+        <header class="main-menu">
+            <img class="logo-gamefinder" src="../assets/img/logo-darkmode.svg" alt="Game Finder">
+            <div class="search-bar">
+                <img class="search-icon" src="../assets/img/search.svg" alt="search">
+                <div class="search-wrapper">
+                    <input name="search-filter" type="text" placeholder="Search games...">
+                    <ul class="search-results">
+
+                    </ul>
                 </div>
-                <div class="account">
-                    <a class="log-out" href="#">Log out</a>
-                    <div class="account-menu"></div>
-                        <div class="account-box"></div>
-                </div>
-            </div>    
-            <div class="sub-menu">
-                <h1>New and trending</h1>
-                <p>Based on player counts and release date</p>
-            </div>    
-        </header>
+            </div>
+            <div class="account">
+                <a class="log-out" href="#">Log out</a>
+                <div class="account-menu"></div>
+                    <div class="account-box"></div>
+            </div>
+        </header>    
+        <div class="sub-menu">
+            <h1>New and trending</h1>
+            <p>Based on player counts and release date</p>
+        </div>    
+
         <div class="wrapper">
             <nav class="nav-menu">
                 <ul class="list-one">
@@ -103,6 +107,23 @@
                     </div>
                 </div>-->
             </div>
+
+            <template id="game-template">
+                <div class="small-card">
+                    <div class="small-card-top">
+                        <img class="small-card-fav" src="../assets/img/fav.svg" alt="">
+                        <div class="small-card-image"></div>
+                    </div>
+                    <div class="small-card-bot">
+                        <h1 class="game-title"></h1>
+                        <p class="small-card-ranking"></p>
+                        <p class="release">Release date:</p><span class="release-date"></span>
+                        <p class="genres">Genres:</p><span class="genres-txt"></span>
+                        <div class="platform-container">
+                        </div>
+                    </div>
+                </div>
+            </template>
             </div>
         </div>
     </div>
