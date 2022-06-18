@@ -4,35 +4,36 @@ const key = '4323124d7d5f42429ace56169e90fb3e';
 const urlBaseGames = 'https://api.rawg.io/api/games?key=' + key + '&page=$page&page_size=$page_size';
 const pageSize = 21;
 let container;
+let cardNumer = 1;
 
-window.onload = function(){
-    container = document.getElementById("container");
+window.onload = function(){                                    // cargas pagina, y agarras una referencia al container para cargar los 21 juegos
+    container = document.getElementById("container");       //trae los 21 juegos
 
     appendNewGames(getGames(pagina++, pageSize));
 };
 
 window.addEventListener('scroll',() => {
-    const {scrollHeight, scrollTop, clientHeight} = document.documentElement;
+    const {scrollHeight, scrollTop, clientHeight} = document.documentElement;       //si no esta muere en esos 21 // reacciona a eventos, en este caso scroll
 
-    if (scrollTop + clientHeight > scrollHeight - 5){
-        setTimeout(() => appendNewGames(getGames(pagina++, pageSize)),1000);
+    if (scrollTop + clientHeight > scrollHeight - 5){                                  //encontro el final de la pagina
+        setTimeout(() => appendNewGames(getGames(pagina++, pageSize)),1000);            //al final, espera 1 segundo y llama de nuevo al metodo de traer juego arrow function
     }
 });
 
-function getGames(page, size) {
+function getGames(page, size) {                                                         //fetch al numero de paginas y trae juegos desde server 
     return fetch(urlBaseGames.replace('$page', page).replace('$page_size', size))
         .then(response => response.json().then(data => data.results));
 }
 
-function appendNewGames(promiseGames) {
+function appendNewGames(promiseGames) {                                         //tengo el container, le agrega los juegos que me traje, trae en json   
     promiseGames.then(games => {
         games.forEach(game => {
-            container.innerHTML += getHtmlRenderedGameCard(game);
+            container.innerHTML += getHtmlRenderedGameCard(game);               //tranforma json a html con la funcion de abajo hethtmlrender....
         });
     });
 }
 
-function getPlatformLogo(platform) {
+function getPlatformLogo(platform) {                                            
     if (PLATFORMS.map(p => p.name).includes(platform)) {
         return PLATFORMS.find(p => p.name === platform).logo;
     }
@@ -40,31 +41,31 @@ function getPlatformLogo(platform) {
     return null;
 }
 
-function getHtmlRenderedGameCard(game){
-    const genre = game.genres.reduce((finalGenre, genre) => {
+function getHtmlRenderedGameCard(game){                                                 
+    const genre = game.genres.reduce((finalGenre, genre) => {                                       //game sale del json game. es de ahi
         return finalGenre + genre.name + ", ";
-    }, '').slice(0, -2);
+    }, '').slice(0, -2);                                                                               //borra los dos ultimos ccaracteres
 
-    const formattedGenre = genre.length >= 13? genre.substring(0, 10) + '...' : genre;
+    const formattedGenre = genre.length >= 13? genre.substring(0, 10) + '...' : genre;                  
 
     const formattedName = game.name.length >= 20? game.name.substring(0, 17) + '...' : game.name;
 
-    const gamePlatforms = game.parent_platforms.map(p => p.platform).map(p => p.name);
+    const gamePlatforms = game.parent_platforms.map(p => p.platform).map(p => p.name);                      ////map convierte cosas de tal plataforma, quedate con el nombre del arreglo
     const gamePlatformsLogo = gamePlatforms
-        .map(p => getPlatformLogo(p))
-        .filter(logo => logo !== null)
-        .reduce((logoList, logo) => {
-            return logoList + logo;
+        .map(p => getPlatformLogo(p))                                                                       // convierto pc y xbox a sus logos en vez de nombre tengo svg
+        .filter(logo => logo !== null)                                                                     // recorre el map y saca los nulls
+        .reduce((logoList, logo) => {                                                                      //reduce un arreglo a un elemento (html) AGRUPADOR / ELEMENTO ACTUAL 
+            return logoList + logo;                                                                        /// el agrupador se convierte en svg, agregame el svg que tengo, y despues los otros como tengo en html
         }, '');
 
     return "<div class=\"small-card\">" +
         "                    <div class=\"small-card-top\">" +
-        "                        <img class=\"small-card-fav\" src=\"../assets/img/like.svg\" alt=\"\">" +
+        "                        <img class=\"small-card-fav\" src=\"../assets/img/fav.svg\" alt=\"\">" +
         "                        <div class=\"small-card-image\" style=\"background-image: url(" + game.background_image + ")\"></div>" +
         "                    </div>" +
         "                    <div class=\"small-card-bot\">" +
         "                        <h1 class=\"game-title\" title=\"" + game.name + "\">" + formattedName +"</h1>" +
-        "                        <p class=\"small-card-ranking\">#1</p>" +
+        "                        <p class=\"small-card-ranking\">#" + (cardNumer++) + "</p>" +
         "                        <p class=\"release\">Release date:</p><span class=\"release-date\">" + game.released  + "</span>" +
         "                        <p class=\"genres\">Genres:</p><span class=\"genres-txt\" title=\"" + genre + "\">" + formattedGenre + "</span>" +
         "                        <div class=\"platform-container\">" +

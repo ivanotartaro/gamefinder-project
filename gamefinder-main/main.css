@@ -2,7 +2,6 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Exo', sans-serif;
-    
 }
 
 #main-page{
@@ -14,11 +13,9 @@ body{
     margin: 0;
 	padding: 0;
 	width: 100%;
-	/*height: 1024px;*/
     min-height: 1024px;
 	left: 0px;
 	top: 0px;
-    
 }
 
 .main-menu{
@@ -30,8 +27,7 @@ body{
     display: flex;
     justify-content: space-between;
     position: fixed;
-    z-index: 10;
-    
+    z-index: 10; 
 }
 
 .logo-gamefinder{
@@ -41,7 +37,6 @@ body{
 }
 
 .search-bar{
-    
     width: 362px;
     height: 47px;
     background-color: #fff;
@@ -49,17 +44,14 @@ body{
     align-items: center;
     margin-right: 43%;
     display: flex;
-
 }
 
 .search-bar input{
     outline: 0px;
     border: 0px;
-    
     width: 314px;
     height: 25.85px;
     margin-left: 11px;
-    
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -78,7 +70,7 @@ body{
 }
 
 .account{
-    position: absolute; /* flex  margin*/
+    position: absolute;
     width: 48px;
     height: 48px;
     margin: 0 0 0 95%;
@@ -153,13 +145,11 @@ body{
 }
 
 .nav-menu{
-    /* position: absolute; */
     color: #FFFFFF;
     height: 100%;
     width: 260px;
     position: fixed;
     margin-top: 14%;
-   
 }
 
 .nav-menu a{
@@ -170,7 +160,6 @@ body{
     font-size: 18px;
     line-height: 24px;
     margin-left: 15px;
-     
 }
 
 .nav-menu ul{
@@ -182,7 +171,6 @@ body{
     display: flex;
     align-items: center;
     text-align: center; 
-    
 }
 
 .list-one{
@@ -226,15 +214,11 @@ a:focus{
     margin-left: 19%;
     margin-top: 15%;
     padding-right: 2%;
-  
-  
 }
 
 .wrapper {
     display: flex;
     justify-content: flex-start;
- 
-   
 }
 
 .small-card{
@@ -245,23 +229,16 @@ a:focus{
     margin: 5px;
     position: relative;
     display: inline-block;
-
 }
 
 .small-card-image{
     border-top-right-radius: 12px;
     border-top-left-radius: 12px;
     display: block;
-    /*width: 363px;
-    height: 60%;*/
     width: 363px;
     height: 179px;
     background-size: cover;
     background-repeat: no-repeat;
-    /*background-image: url(../assets/img/screen.png);*/
-
-
-
 }
 
 .small-card-image img {
@@ -288,7 +265,6 @@ a:focus{
     font-size: 24px;
     line-height: 32px;
     color: #FFFFFF;
-
     margin: 5px 0 20px 16px;
 }
 
@@ -298,7 +274,6 @@ a:focus{
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
-
     color: #36B972;
     margin: -46px 0 0 325px;
 }
@@ -310,7 +285,6 @@ a:focus{
     font-size: 14px;
     line-height: 19px;
     margin: 13px 0 0 16px;
-
     color: #939393;
 
 }
@@ -327,14 +301,12 @@ a:focus{
     display: flex;
     align-items: center;
     color: #FFFFFF;
-
     margin: -18px 0 0 145px;
 }
 
 .platform-container{
     height: 80px;
     width: 120px;
-    /* background-color: #FFFFFF; */
     margin-left: 230px;
     margin-top: -70px;
     display: grid;
