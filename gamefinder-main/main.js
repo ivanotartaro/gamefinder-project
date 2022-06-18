@@ -1,12 +1,18 @@
 let pagina = 1;
 
-const key = '4323124d7d5f42429ace56169e90fb3e';
+const ATTR_AT = 'accessToken';
+
+const key = 'a9529065ada646aa8aead9848ff6613f';
 const urlBaseGames = 'https://api.rawg.io/api/games?key=' + key + '&page=$page&page_size=$page_size';
 const pageSize = 21;
 let container;
 let ulResults;
 let gameRanking = 1;
 let scrolleableResults = true;
+
+if (!window.localStorage.getItem(ATTR_AT)) {
+    window.location.href = '../login/login.html';
+}
 
 window.onload = function(){
     container = document.getElementById("container");
@@ -52,6 +58,11 @@ window.onload = function(){
         searchGames();
     };
 
+    document.querySelector(".log-out").onclick = () => {
+        window.localStorage.removeItem(ATTR_AT);
+        window.location.href = '../login/login.html';
+    }
+
     appendNewGames(getGames(pagina++, pageSize));
 };
 
@@ -90,11 +101,9 @@ function getGames(page, size, search_exact) {
     let urlFetch = urlBaseGames.replace('$page', page).replace('$page_size', size);
     let searchFilter = document.querySelector("input[name=search-filter]").value;
 
-    if (searchFilter) { // Si hay algo escrito en el input de la search bar, se busca en base a eso
+    if (searchFilter) {
         urlFetch += "&search=" + searchFilter + "&search_precise=" + true;
 
-        // Si el usuario selecciona una opcion del autocomplete la búsqueda es EXACTA, sino se busca por el texto
-        // pero sin exacto
         if (search_exact) {
             urlFetch += "&search_exact=" + true;
         }

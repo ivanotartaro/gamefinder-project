@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Exo', sans-serif;
-    
+    overflow-x: hidden;
 }
 
 #main-page{
@@ -14,11 +14,9 @@ body{
     margin: 0;
 	padding: 0;
 	width: 100%;
-	/*height: 1024px;*/
     min-height: 1024px;
 	left: 0px;
 	top: 0px;
-    
 }
 
 .main-menu{
@@ -31,7 +29,6 @@ body{
     justify-content: space-between;
     position: fixed;
     z-index: 10;
-    
 }
 
 .logo-gamefinder{
@@ -41,25 +38,21 @@ body{
 }
 
 .search-bar{
-    
     width: 362px;
     height: 47px;
     background-color: #fff;
     border-radius: 4px;
     align-items: center;
-    margin-right: 25%;
+    margin-right: 15%;
     display: flex;
-
 }
 
 .search-bar input{
     outline: 0px;
     border: 0px;
-    
     width: 314px;
     height: 25.85px;
     margin-left: 11px;
-    
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -78,38 +71,27 @@ body{
 }
 
 .account{
-    width: 48px;
-    height: 48px;
     text-decoration: none;
-    
-}
-
-.account-menu{
-    width: 48px;
-    height: 48px;
-    left: 1352px;
+    display: flex;
+    margin-right: 1%;
 }
 
 .account-box{
-    box-sizing: border-box;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
     background: #C4C4C4;
     border: 2px solid #FFFFFF;
     border-radius: 100%;
+    width: 49px;
+    height: 48px;
+    margin-right: 6%;
 }
 
 .account a{
     color: #FFFFFF;
-    margin-left: -75px;
-    margin-top: -22px;
-    position: absolute;
+    margin-top: 4.5%;
+    position: flex;
     width: 66px;
     height: 39px;
     text-decoration: none;
-    top: 27px;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -149,13 +131,11 @@ body{
 }
 
 .nav-menu{
-    /* position: absolute; */
     color: #FFFFFF;
     height: 100%;
     width: 260px;
     position: fixed;
     margin-top: 14%;
-   
 }
 
 .nav-menu a{
@@ -166,7 +146,6 @@ body{
     font-size: 18px;
     line-height: 24px;
     margin-left: 15px;
-     
 }
 
 .nav-menu ul{
@@ -178,7 +157,6 @@ body{
     display: flex;
     align-items: center;
     text-align: center; 
-    
 }
 
 .list-one{
@@ -222,15 +200,11 @@ a:focus{
     margin-left: 19%;
     margin-top: 15%;
     padding-right: 2%;
-  
-  
 }
 
 .wrapper {
     display: flex;
     justify-content: flex-start;
- 
-   
 }
 
 .small-card{
@@ -241,23 +215,16 @@ a:focus{
     margin: 5px;
     position: relative;
     display: inline-block;
-
 }
 
 .small-card-image{
     border-top-right-radius: 12px;
     border-top-left-radius: 12px;
     display: block;
-    /*width: 363px;
-    height: 60%;*/
     width: 363px;
     height: 179px;
     background-size: cover;
     background-repeat: no-repeat;
-    /*background-image: url(../assets/img/screen.png);*/
-
-
-
 }
 
 .small-card-image img {
@@ -284,7 +251,6 @@ a:focus{
     font-size: 24px;
     line-height: 32px;
     color: #FFFFFF;
-
     margin: 5px 0 20px 16px;
 }
 
@@ -294,7 +260,6 @@ a:focus{
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
-
     color: #36B972;
     margin: -46px 0 0 325px;
 }
@@ -306,7 +271,6 @@ a:focus{
     font-size: 14px;
     line-height: 19px;
     margin: 13px 0 0 16px;
-
     color: #939393;
 
 }
@@ -323,14 +287,12 @@ a:focus{
     display: flex;
     align-items: center;
     color: #FFFFFF;
-
     margin: -18px 0 0 145px;
 }
 
 .platform-container{
     height: 80px;
     width: 120px;
-    /* background-color: #FFFFFF; */
     margin-left: 230px;
     margin-top: -70px;
     display: grid;
@@ -349,21 +311,24 @@ a:focus{
 }
 .search-results {
     position: absolute;
-    background-color: white;
+    background-color:#FFFFFF;
+    margin-top: 15px;
     z-index: 10;
-    width: 95%;
+    width: 341px;
     height: 100px;
-    left: -1.5em;
-    top: 1.3em;
+    left: -28px;
     display: none;
+    border-radius: 4px;
+    padding: 10px;
 }
 
 .search-results li {
     list-style-type: none;
     cursor: pointer;
-    padding-bottom: 0.2em;
+    padding-bottom: 5px;
 }
 
 .search-results li:hover {
     background-color: #5FE19B;
+    border-radius: 4px;
 }
