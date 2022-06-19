@@ -17,7 +17,6 @@ This web app is used to search for games and have information about them.
 - Conenection with rawg.io API to get data.
 - Show that data in rendered cards.
 - Search functionality.
-- Last searches.
 
 
 ## To do list:
@@ -29,3 +28,4 @@ This web app is used to search for games and have information about them.
 - Improve accessibility.
 - Page optimization.
 - Improve SEO.
+- Last searches.
