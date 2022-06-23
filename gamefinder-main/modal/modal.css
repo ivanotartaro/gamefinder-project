@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo';
+}
+
+.container{
+    height: 1500px;
+    width: 1500px;
+    background-color: white;
+ 
+
+}
+
+
+.modal{
+    margin: 100px;
+    height: 793px;
+    width: 1076px;
+
+
+  
+    
+    
+    background-color: #303030;
+
+  
+     background-image: url(/gamefinder-main/modal/assets/screen.png);
+   
+
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    
+    border-radius: 24px;
+    
+}
+
+.modal-bot{
+    
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+    background: linear-gradient(180deg, rgba(48, 48, 48, 0.0001) 0%, #303030 84.4%);
+
+    
+
+    border-radius: 24px;
+   
+
+}
