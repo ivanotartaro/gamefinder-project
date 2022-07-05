@@ -1,68 +1,70 @@
-body{
+body {
     overflow: hidden;
     margin: 0;
     padding: 0;
     font-family: 'Exo', sans-serif;
-    
+
     --base-color: #fff;
     --input-color: #939393;
-    --link-txt-color: #5FE19B;  
+    --link-txt-color: #5FE19B;
 }
 
-html,body{
+/* html,
+body {
     height: 1024px;
     min-height: 100%;
     max-height: 100%;
-}
+} */
 
-.logo-gamefinder{
+.logo-gamefinder {
     position: absolute;
     top: 10px;
     margin: 2em 0 0 2em;
 
 }
 
-.login-container{
+.login-container {
     position: absolute;
     width: 462px;
-	height: 702px;
-	right: 150px;
-	top: 178px;
+    height: 702px;
+    right: 150px;
+    top: 178px;
     border-radius: 12px;
     color: var(--base-color);
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
-    align-items: center; 
+    align-items: center;
 }
 
-.login-container h2{
+.login-container h2 {
     margin: 40px 50px 8px 50px;
-	font-style: normal;
-	font-weight: 700;
-	font-size: 20px;
-	line-height: 27px;  
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
 }
 
-.login-container h3{
+.login-container h3 {
     height: 28px;
-	left: 982px;
-	top: 253px;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 21px; 
+    left: 982px;
+    top: 253px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
 }
 
-.email{
+.email {
     background: var(--base-color);
     border-radius: 4px;
     margin: 32px 50px 16px 50px;
     height: 47px;
     width: 362px;
-    
-    
+
+
 }
-.email input{
+
+.email input {
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -73,18 +75,18 @@ html,body{
     width: 330px;
     margin: 10.58px 16px 10.57px 0;
     outline: 0;
-    
+
 }
 
-.password{
+.password {
     background: var(--base-color);
     border-radius: 4px;
     margin: 16px 50px 13px 50px;
     height: 47px;
-    width: 362px; 
+    width: 362px;
 }
 
-.password input{
+.password input {
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -97,24 +99,24 @@ html,body{
     outline: 0;
 }
 
-.password img{
+.password img {
     width: 21.69px;
     height: 16px;
     margin-left: -45px;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
-.checkbox-box{ 
+.checkbox-box {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    width: 362px;  
+    width: 362px;
     margin: 16px 50px 13px 50px;
     display: flex;
     align-items: center;
 }
 
-input[type="checkbox"]{
+input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
     border: 1.5px solid #FFFFFF;
@@ -129,7 +131,7 @@ input[type="checkbox"]{
     text-align: center;
 }
 
-input[type="checkbox"]:after{
+input[type="checkbox"]:after {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "\f00c";
@@ -138,27 +140,27 @@ input[type="checkbox"]:after{
     display: none;
 }
 
-input[type="checkbox"]:checked{
+input[type="checkbox"]:checked {
     background-color: var(--link-txt-color);
 }
 
-input[type="checkbox"]:checked:after{
+input[type="checkbox"]:checked:after {
     display: block;
 }
 
-.checkbox-box label{
+.checkbox-box label {
     cursor: pointer;
     margin: 4px 0 0 16px;
 }
 
-.link-color{
+.link-color {
     text-decoration: none;
     color: var(--link-txt-color);
     margin-left: auto;
     margin-top: auto;
 }
 
-.login-button{
+.login-button {
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -174,11 +176,11 @@ input[type="checkbox"]:checked:after{
     cursor: pointer;
 }
 
-.login-button:hover{
+.login-button:hover {
     background-color: #4CC986;
 }
 
-.register{
+.register {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -186,42 +188,46 @@ input[type="checkbox"]:checked:after{
     margin: -8px 0 24px 0;
 }
 
-.register .link-color{
+.register .link-color {
     margin-left: 5px;
 }
 
-.division{
+.division {
     display: flex;
     justify-content: space-around;
 }
 
-.division-one, .division-two{
+.division-one,
+.division-two {
     width: 147.44px;
     height: 1px;
     border: var(--base-color);
     background-color: var(--base-color);
 }
 
-.division-one{
+.division-one {
     margin: 10px 0 35px 40px;
 }
 
-.division-two{
+.division-two {
     margin: 10px 40px 35px 0;
 }
-.division a{
+
+.division a {
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
 }
 
-.login-apps{
+.login-apps {
     display: grid;
-    margin: 0 50px 0 50px; 
-    
+    margin: 0 50px 0 50px;
+
 }
 
-.login-fb, .login-tw, .login-go{
+.login-fb,
+.login-tw,
+.login-go {
     width: 362px;
     height: 47px;
     border-radius: 6px;
@@ -235,25 +241,26 @@ input[type="checkbox"]:checked:after{
     cursor: pointer;
 }
 
-.login-tw, .login-go{
+.login-tw,
+.login-go {
     margin: 18px 0 0 0;
 }
 
-.fb-icon{
+.fb-icon {
     width: 20px;
     height: 20px;
     margin: 13px 14px 0 0;
 
 }
 
-.tw-icon{
+.tw-icon {
     width: 20px;
     height: 20px;
     margin: 13px 23px 0 0;
-    margin-left: -10px;          
+    margin-left: -10px;
 }
 
-.go-icon{
+.go-icon {
     width: 18px;
     height: 18px;
     margin: 13px 24px 0 -10px;
@@ -303,7 +310,7 @@ input[type="checkbox"]:checked:after{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
+
 }
 
 .pagination-dot {
@@ -326,8 +333,8 @@ input[type="checkbox"]:checked:after{
     background-position: center;
     background-repeat: no-repeat;
     margin: 0;
-	padding: 0;
-	width: 100%;
+    padding: 0;
+    width: 100%;
 }
 
 .background {
@@ -337,7 +344,7 @@ input[type="checkbox"]:checked:after{
 }
 
 .background img {
-    height: auto;
+    height: 100vh;
     display: block;
     width: 100%;
     object-fit: cover;
