@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <script type="text/javascript" src="main.js"></script>
+    <!-- <script type="text/javascript" src="main.js"></script> -->
 </head>
 
 <body>
@@ -36,6 +36,10 @@
         <div class="sub-menu">
             <h1>New and trending</h1>
             <p>Based on player counts and release date</p>
+            <p class="dm-text">Dark mode</p>
+            <img class="dm-switch" src="../assets/img/switchon.svg" alt="">
+            <img class="small-card-view" src="../assets/img/ThumbnailsActive.svg" alt="">
+            <img class="big-card-view" src="../assets/img/Disabled.svg" alt="">
         </div>    
 
         <div class="wrapper">
@@ -75,9 +79,9 @@
             <div id="container" class="container">
                 <!--<div class="small-card">
                     <div class="small-card-top">
-                        <img class="small-card-fav" src="../assets/img/fav.svg" alt="">
-                        &lt;!&ndash;<img class="small-card-image" src="../assets/img/screen.png" alt="">&ndash;&gt;
-                        <div class="small-card-image" style="background-image: url(../assets/img/screen.png)"></div>
+                        <img class="small-card-fav" src="./gamefinder-last-searches/assets/img/fav.svg" alt="">
+                        &lt;!&ndash;<img class="small-card-image" src="./gamefinder-last-searches/assets/img/screen.png" alt="">&ndash;&gt;
+                        <div class="small-card-image" style="background-image: url(./gamefinder-last-searches/assets/img/screen.png)"></div>
                     </div>
                     <div class="small-card-bot">
                         <h1 class="game-title">Biomutant</h1>
@@ -109,6 +113,21 @@
             </div>
 
             <template id="game-template">
+                <!-- <div class="big-card">
+                    <div class="big-card-top">
+                        <img class="big-card-fav" src="../assets/fav.svg" alt="">
+                        <div class="big-card-image"></div>
+                    </div>
+                    <div class="big-card-bot">
+                        <h1 class="game-title"></h1>
+                        <p class="big-card-ranking">#1</p>
+                            <div class="info"></div>    
+                                <p class="release">Release date:</p><span class="release-date"></span>
+                                <p class="genres">Genres:</p><span class="genres-txt"></span>
+                            </div>
+                        <div class="platform-container" dir="rtl"></div>
+                        <p class="description"></p>
+                    </div> -->
                 <div class="small-card">
                     <div class="small-card-top">
                         <img class="small-card-fav" src="../assets/img/fav.svg" alt="">
@@ -117,9 +136,9 @@
                     <div class="small-card-bot">
                         <h1 class="game-title"></h1>
                         <p class="small-card-ranking"></p>
-                        <p class="release">Release date:</p><span class="release-date"></span>
+                        <p class="release">Release date:</p><span class="release-date" ></span>
                         <p class="genres">Genres:</p><span class="genres-txt"></span>
-                        <div class="platform-container">
+                        <div class="platform-container" dir="rtl">
                         </div>
                     </div>
                 </div>
