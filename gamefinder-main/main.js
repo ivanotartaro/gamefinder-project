@@ -203,7 +203,7 @@ function getHtmlRenderedGameCard(game) {
 
 //big card
 
-/* function getHtmlRenderedGameCard(game) {
+function getHtmlRenderedGameCard(game) {
   const genre = buildGenre(game.genres);
   const formattedGenre =
     genre.length >= 30 ? genre.substring(0, 10) + "..." : genre;
@@ -240,7 +240,7 @@ function getHtmlRenderedGameCard(game) {
   });
 
   return bigCardGame;
-} */
+}
 
 const PLATFORMS = [
   {
