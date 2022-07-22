@@ -8,7 +8,7 @@ const urlBaseGames =
   key +
   "&page=$page&page_size=$page_size";
 const urlBaseGame = "https://api.rawg.io/api/games/$game_id?key=" + key;
-const pageSize = 21;
+const pageSize = 5; //tiene que ser 21
 let container;
 let ulResults;
 let gameRanking = 1;
@@ -130,7 +130,9 @@ function appendNewGames(promiseGames) {
   promiseGames.then((games) => {
     if (games) {
       games.forEach((game) => {
-        container.append(getHtmlRenderedGameCard(game));
+        //container.append(getHtmlRenderedGameCard(game)); //changes here
+        container.append(getHtmlRenderedGameSmallCard(game));
+        container.append(getHtmlRenderedGameBigCard(game));
       });
     }
   });
@@ -169,7 +171,9 @@ function formatGameName(name, maxLength) {
     : name;
 }
 
-function getHtmlRenderedGameCard(game) {
+// SMALL
+
+function getHtmlRenderedGameSmallCard(game) {
   const genre = buildGenre(game.genres);
   const formattedGenre =
     genre.length >= 30 ? genre.substring(0, 10) + "..." : genre;
@@ -178,8 +182,8 @@ function getHtmlRenderedGameCard(game) {
 
   const gamePlatformsLogo = buildPlatforms(game.parent_platforms);
 
-  const gameTemplate = document.querySelector("#game-template");
-  const smallCardGame = gameTemplate.content.cloneNode(true);
+  const gameTemplateSmall = document.querySelector("#game-template-small");
+  const smallCardGame = gameTemplateSmall.content.cloneNode(true);
 
   smallCardGame.querySelector(".small-card-image").style =
     "background-image: url(" + game.background_image + ")";
@@ -203,7 +207,7 @@ function getHtmlRenderedGameCard(game) {
 
 //big card
 
-function getHtmlRenderedGameCard(game) {
+function getHtmlRenderedGameBigCard(game) {
   const genre = buildGenre(game.genres);
   const formattedGenre =
     genre.length >= 30 ? genre.substring(0, 10) + "..." : genre;
@@ -212,27 +216,27 @@ function getHtmlRenderedGameCard(game) {
 
   const gamePlatformsLogo = buildPlatforms(game.parent_platforms);
 
-  const gameTemplate = document.querySelector("#game-template");
-  const bigCardGame = gameTemplate.content.cloneNode(true);
+  const gameTemplateBig = document.querySelector("#game-template-big");
+  const bigCardGame = gameTemplateBig.content.cloneNode(true);
 
   bigCardGame.querySelector(".big-card-image").style =
     "background-image: url(" + game.background_image + ")";
 
-  bigCardGame.querySelector(".game-title").innerHTML = formattedName;
-  bigCardGame.querySelector(".game-title").title = game.name;
+  bigCardGame.querySelector(".big-game-title").innerHTML = formattedName;
+  bigCardGame.querySelector(".big-game-title").title = game.name;
 
   bigCardGame.querySelector(".big-card-ranking").innerHTML =
     "#" + gameRanking++;
 
-  bigCardGame.querySelector(".release-date").innerHTML = game.released;
+  bigCardGame.querySelector(".big-release-date").innerHTML = game.released;
 
-  bigCardGame.querySelector(".genres-txt").innerHTML = formattedGenre;
-  bigCardGame.querySelector(".genres-txt").title = genre;
+  bigCardGame.querySelector(".big-genres-txt").innerHTML = formattedGenre;
+  bigCardGame.querySelector(".big-genres-txt").title = genre;
 
-  bigCardGame.querySelector(".platform-container").innerHTML =
+  bigCardGame.querySelector(".big-platform-container").innerHTML =
     gamePlatformsLogo;
 
-  bigCardGame.querySelector(".description").id = "id-" + game.id;
+  bigCardGame.querySelector(".big-description").id = "id-" + game.id;
 
   getGame(game.id).then((game) => {
     document.querySelector("#id-" + game.id).innerHTML =

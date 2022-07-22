@@ -3,15 +3,12 @@ body {
   padding: 0;
   font-family: "Exo", sans-serif;
   overflow-x: hidden;
-}
-
-.hidden {
-  display: none;
+  background-color: #151515;
 }
 
 .backpage {
-  width: 100%;
-  background-color: #151515;
+  max-width: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
 }
@@ -21,8 +18,8 @@ body {
   height: 94px;
   background: linear-gradient(180deg, #5fe19b 0%, #36b972 50%, #0ea152 100%);
   box-shadow: 1px -3px 36px rgba(0, 0, 0, 0.5);
-} */
-
+}
+ */
 #main-page {
   background-color: #151515;
   min-height: 100vh;
@@ -119,6 +116,34 @@ body {
   text-align: right;
 }
 
+/* SEARCH AUTOCOMPLETE */
+.search-wrapper {
+  position: relative;
+}
+.search-results {
+  position: absolute;
+  background-color: #ffffff;
+  margin-top: 15px;
+  z-index: 10;
+  width: 341px;
+  height: 100px;
+  left: -28px;
+  display: none;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.search-results li {
+  list-style-type: none;
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+
+.search-results li:hover {
+  background-color: #5fe19b;
+  border-radius: 4px;
+}
+
 .sub-menu {
   width: 1440px;
   height: 120px;
@@ -191,10 +216,10 @@ body {
 
 .nav-menu {
   color: #ffffff;
-  height: 100%;
+  height: auto;
   width: 260px;
   position: fixed;
-  margin-top: 14%;
+  margin-top: 200px;
 }
 
 .nav-menu a {
@@ -254,7 +279,7 @@ a:focus {
   height: auto;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 5px;
   margin-left: 19%;
   margin-top: 15%;
@@ -268,37 +293,9 @@ a:focus {
   justify-content: flex-start;
 }
 
-/* SEARCH AUTOCOMPLETE */
-.search-wrapper {
-  position: relative;
-}
-.search-results {
-  position: absolute;
-  background-color: #ffffff;
-  margin-top: 15px;
-  z-index: 10;
-  width: 341px;
-  height: 100px;
-  left: -28px;
-  display: none;
-  border-radius: 4px;
-  padding: 10px;
-}
-
-.search-results li {
-  list-style-type: none;
-  cursor: pointer;
-  padding-bottom: 5px;
-}
-
-.search-results li:hover {
-  background-color: #5fe19b;
-  border-radius: 4px;
-}
-
 /* small card */
 
-/* .small-card {
+.small-card {
   height: 314px;
   width: 363px;
   border-radius: 12px;
@@ -368,6 +365,11 @@ a:focus {
   margin-top: 10px;
 }
 
+.genres,
+.genres-txt {
+  margin-top: 10px;
+}
+
 .release-date,
 .genres-txt {
   font-style: normal;
@@ -384,7 +386,7 @@ a:focus {
   height: 80px;
   width: 120px;
   margin-left: 220px;
-  margin-top: -57px;
+  margin-top: -62px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding-left: 13px;
@@ -393,7 +395,7 @@ a:focus {
 .platform-container svg {
   margin: 11px 10px 0 0;
 }
- */
+
 /* big card  */
 
 .big-card {
@@ -429,7 +431,7 @@ a:focus {
   height: 25px;
 }
 
-.game-title {
+.big-game-title {
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -447,8 +449,8 @@ a:focus {
   margin: -46px 0 0 93%;
 }
 
-.release,
-.genres {
+.big-release,
+.big-genres {
   font-family: "Exo";
   font-style: normal;
   font-weight: 500;
@@ -457,17 +459,17 @@ a:focus {
   color: #939393;
 }
 
-.release {
+.big-release {
   margin: 15px 0 0 18px;
 }
 
-.genres {
+.big-genres {
   margin-top: -17px;
   margin-left: 40%;
 }
 
-.release-date,
-.genres-txt {
+.big-release-date,
+.big-genres-txt {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -478,12 +480,12 @@ a:focus {
   margin: -18px 0 0 110px;
 }
 
-.genres-txt {
+.big-genres-txt {
   margin-top: -32px;
   margin-left: 49%;
 }
 
-.platform-container {
+.big-platform-container {
   height: 80px;
   width: 120px;
   margin-left: 82%;
@@ -494,11 +496,11 @@ a:focus {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.platform-container svg {
+.big-platform-container svg {
   margin: 11px 21px 0 0;
 }
 
-.description {
+.big-description {
   color: #ffffff;
   justify-content: center;
   font-family: "Exo";
@@ -508,4 +510,23 @@ a:focus {
   line-height: 19px;
   margin: 10px;
   margin-top: -50px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .nav-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <script type="text/javascript" src="main.js"></script>
-    <!--  <script type="text/javascript" src="display.js"></script> -->
+    <script type="text/javascript" src="main.js" defer></script>
+    <script type="text/javascript" src="display.js" defer></script>
 </head>
 
 <body>
@@ -89,29 +89,10 @@
                 
                 <div id="container" class="container"></div>
                 
-                <template id="game-template">
-
-                    <!-- BIG CARD -->
-
-                    <div class="big-card hidden">
-                        <div class="big-card-top">
-                            <img class="big-card-fav" src="../assets/img/fav.svg" alt="">
-                            <div class="big-card-image"></div>
-                        </div>
-                        <div class="big-card-bot">
-                            <h1 class="game-title"></h1>
-                            <p class="big-card-ranking">#1</p>
-                            <div class="info"></div>    
-                            <p class="release">Release date:</p><span class="release-date"></span>
-                            <p class="genres">Genres:</p><span class="genres-txt"></span>
-                        </div>
-                        <div class="platform-container" dir="rtl"></div>
-                        <p class="description"></p>
-                    </div>
-
-                    <!-- SMALL CARD -->
-
-                    <!-- <div class="small-card">
+                <!-- SMALL CARD -->
+                
+                <template id="game-template-small">
+                    <div class="small-card">
                         <div class="small-card-top">
                             <img class="small-card-fav" src="../assets/img/fav.svg" alt="">
                             <div class="small-card-image"></div>
@@ -123,8 +104,30 @@
                             <p class="genres">Genres:</p><span class="genres-txt"></span>
                             <div class="platform-container" dir="rtl">
                             </div>
-                        </div> -->
+                        </div>
                     </div>
+                </template>   
+
+                         <!-- BIG CARD -->
+
+                <template id="game-template-big">
+                    <div class="big-card  hidden">
+                        <div class="big-card-top">
+                            <img class="big-card-fav" src="../assets/img/fav.svg" alt="">
+                            <div class="big-card-image"></div>
+                        </div>
+                        <div class="big-card-bot">
+                            <h1 class="big-game-title"></h1>
+                            <p class="big-card-ranking">#1</p>
+                            <div class="big-info"></div>    
+                            <p class="big-release">Release date:</p><span class="big-release-date"></span>
+                            <p class="big-genres">Genres:</p><span class="big-genres-txt"></span>
+                        </div>
+                        <div class="big-platform-container" dir="rtl"></div>
+                        <p class="big-description"></p>
+                    </div>
+
+                    
                 </template>
                 </div>
             </div>
