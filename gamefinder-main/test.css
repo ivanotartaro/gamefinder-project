@@ -15,15 +15,16 @@ body {
 }
 
 /* .backpage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
 } */
 
 .main-page {
   min-height: 100vh;
   max-width: 144rem;
+  width: 100vw;
   display: flex;
 }
 
@@ -184,6 +185,14 @@ body {
   line-height: 2.4rem;
 }
 
+.nav-menu {
+  height: auto;
+  width: 18rem;
+  margin-top: 21.2rem;
+  margin-left: 3rem;
+  position: fixed;
+}
+
 .nav-menu a {
   text-decoration: none;
   color: #fff;
@@ -257,14 +266,6 @@ a:focus {
   display: flex;
 }
 
-.nav-menu {
-  height: auto;
-  width: 18rem;
-  margin-top: 21.2rem;
-  margin-left: 2rem;
-  position: fixed;
-}
-
 /* small card */
 
 .small-card {
@@ -278,20 +279,20 @@ a:focus {
 }
 
 .small-card-image {
+  width: 36.3rem;
+  height: 17.9rem;
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
   display: block;
-  width: 36.3rem;
-  height: 17.9rem;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .small-card-image img {
   height: 100%;
+  width: 100%;
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
-  width: 100%;
 }
 
 .small-card-fav {
@@ -368,9 +369,126 @@ a:focus {
   margin: 11px 10px 0 0;
 }
 
+/* big card  */
+
+.big-card {
+  height: 53.8rem;
+  width: 69.7rem;
+  border-radius: 12px;
+  background-color: #303030;
+  position: relative;
+}
+
+.big-card-top {
+  width: 100%;
+  height: 60%;
+}
+
+.big-card-image {
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  display: block;
+  width: auto;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.big-card-fav {
+  margin: 3% 0 0 92%;
+  position: absolute;
+  cursor: pointer;
+  width: 2.7rem;
+  height: 2.5rem;
+}
+
+.big-game-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+  color: #ffffff;
+  margin: 1.5rem 0 2rem 1.6rem;
+}
+
+.big-card-ranking {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  color: #36b972;
+  margin: -4.6rem 0 0 93%;
+}
+
+.big-release,
+.big-genres {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  color: #939393;
+}
+
+.big-release {
+  margin: 1.5rem 0 0 1.8rem;
+}
+
+.big-genres {
+  margin-top: -1.7rem;
+  margin-left: 40%;
+}
+
+.big-release-date,
+.big-genres-txt {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  margin: -1.8rem 0 0 11rem;
+}
+
+.big-genres-txt {
+  margin-top: -2rem;
+  margin-left: 49%;
+}
+
+.big-platform-container {
+  height: 8rem;
+  width: 12rem;
+  margin-left: 82%;
+  margin-top: -3.1rem;
+  display: grid;
+  justify-content: end;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.big-platform-container svg {
+  margin: 1.1rem 2.1rem 0 0;
+}
+
+.big-description {
+  color: #ffffff;
+  justify-content: center;
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  margin-left: 1.8rem;
+  margin-top: -2.7rem;
+}
+
+/* UTILITIES */
+
 .hidden {
   display: none !important;
 }
+
+/* MEDIA QUERIES */
 
 @media screen and (max-width: 1050px) {
   .container {

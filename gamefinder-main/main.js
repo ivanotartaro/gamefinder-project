@@ -8,11 +8,12 @@ const urlBaseGames =
   key +
   "&page=$page&page_size=$page_size";
 const urlBaseGame = "https://api.rawg.io/api/games/$game_id?key=" + key;
-const pageSize = 5; //tiene que ser 21
+const pageSize = 6; //tiene que ser 21
 let container;
 let ulResults;
 let gameRanking = 1;
 let scrolleableResults = true;
+let modoSmall = true;
 
 /* if (!window.localStorage.getItem(ATTR_AT)) {
     window.location.href = '../login/login.html';
@@ -131,8 +132,9 @@ function appendNewGames(promiseGames) {
     if (games) {
       games.forEach((game) => {
         //container.append(getHtmlRenderedGameCard(game)); //changes here
-        container.append(getHtmlRenderedGameSmallCard(game));
-        container.append(getHtmlRenderedGameBigCard(game));
+        container.append(getHtmlRenderedGameSmallCard(game, gameRanking));
+        container.append(getHtmlRenderedGameBigCard(game, gameRanking));
+        gameRanking++;
       });
     }
   });
@@ -173,7 +175,7 @@ function formatGameName(name, maxLength) {
 
 // SMALL
 
-function getHtmlRenderedGameSmallCard(game) {
+function getHtmlRenderedGameSmallCard(game, gameRanking) {
   const genre = buildGenre(game.genres);
   const formattedGenre =
     genre.length >= 30 ? genre.substring(0, 10) + "..." : genre;
@@ -185,6 +187,10 @@ function getHtmlRenderedGameSmallCard(game) {
   const gameTemplateSmall = document.querySelector("#game-template-small");
   const smallCardGame = gameTemplateSmall.content.cloneNode(true);
 
+  if (!modoSmall) {
+    smallCardGame.querySelector(".small-card").classList.add("hidden");
+  }
+
   smallCardGame.querySelector(".small-card-image").style =
     "background-image: url(" + game.background_image + ")";
 
@@ -192,7 +198,7 @@ function getHtmlRenderedGameSmallCard(game) {
   smallCardGame.querySelector(".game-title").title = game.name;
 
   smallCardGame.querySelector(".small-card-ranking").innerHTML =
-    "#" + gameRanking++;
+    "#" + gameRanking;
 
   smallCardGame.querySelector(".release-date").innerHTML = game.released;
 
@@ -207,7 +213,7 @@ function getHtmlRenderedGameSmallCard(game) {
 
 //big card
 
-function getHtmlRenderedGameBigCard(game) {
+function getHtmlRenderedGameBigCard(game, gameRanking) {
   const genre = buildGenre(game.genres);
   const formattedGenre =
     genre.length >= 30 ? genre.substring(0, 10) + "..." : genre;
@@ -219,14 +225,17 @@ function getHtmlRenderedGameBigCard(game) {
   const gameTemplateBig = document.querySelector("#game-template-big");
   const bigCardGame = gameTemplateBig.content.cloneNode(true);
 
+  if (modoSmall) {
+    bigCardGame.querySelector(".big-card").classList.add("hidden");
+  }
+
   bigCardGame.querySelector(".big-card-image").style =
     "background-image: url(" + game.background_image + ")";
 
   bigCardGame.querySelector(".big-game-title").innerHTML = formattedName;
   bigCardGame.querySelector(".big-game-title").title = game.name;
 
-  bigCardGame.querySelector(".big-card-ranking").innerHTML =
-    "#" + gameRanking++;
+  bigCardGame.querySelector(".big-card-ranking").innerHTML = "#" + gameRanking;
 
   bigCardGame.querySelector(".big-release-date").innerHTML = game.released;
 
