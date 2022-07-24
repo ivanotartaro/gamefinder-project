@@ -9,9 +9,14 @@ const bigCard = function () {
   document.querySelector(".container");
   container.style.removeProperty("grid-template-columns");
   container.style.gridTemplateColumns = "repeat(1, 1fr)";
+  container.style.marginRight = "auto";
 
-  document.querySelector(".big-card-view").setAttribute("src", "../assets/functionality/gallery-active.svg");
-  document.querySelector(".small-card-view").setAttribute("src", "../assets/functionality/thumbnails-disabled.svg");
+  document
+    .querySelector(".big-card-view")
+    .setAttribute("src", "../assets/functionality/gallery-active.svg");
+  document
+    .querySelector(".small-card-view")
+    .setAttribute("src", "../assets/functionality/thumbnails-disabled.svg");
 
   modoSmall = false;
 };
@@ -27,9 +32,14 @@ const smallCard = function () {
   document.querySelector(".container");
   container.style.removeProperty("grid-template-columns");
   container.style.gridTemplateColumns = "repeat(3, 1fr)";
+  container.style.marginRight = "2rem";
 
-    document.querySelector(".big-card-view").setAttribute("src", "../assets/functionality/gallery-disabled.svg");
-    document.querySelector(".small-card-view").setAttribute("src", "../assets/functionality/thumbnails-active.svg");
+  document
+    .querySelector(".big-card-view")
+    .setAttribute("src", "../assets/functionality/gallery-disabled.svg");
+  document
+    .querySelector(".small-card-view")
+    .setAttribute("src", "../assets/functionality/thumbnails-active.svg");
 
   modoSmall = true;
 };

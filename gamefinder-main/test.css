@@ -14,18 +14,17 @@ body {
   font-family: "Exo", sans-serif;
 }
 
-/* .backpage {
+.backpage {
   max-width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
-} */
+}
 
 .main-page {
   min-height: 100vh;
   max-width: 144rem;
   width: 100vw;
-  display: flex;
 }
 
 .main-menu {
@@ -245,11 +244,15 @@ a:focus {
   color: #5fe19b;
 }
 
-/* //////////////////////////////// */
-
+.wrapper {
+  max-width: 144rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 .container {
   height: auto;
-  width: 80%;
+  width: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5px;
@@ -258,12 +261,6 @@ a:focus {
   margin-top: 21.2rem;
   justify-items: center;
   align-items: center;
-}
-
-.wrapper {
-  max-width: 144rem;
-  width: 100%;
-  display: flex;
 }
 
 /* small card */
@@ -490,24 +487,46 @@ a:focus {
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 1050px) {
-  .container {
+@media screen and (max-width: 1350px) {
+  /* .container {
     grid-template-columns: repeat(2, 1fr);
-  }
+    column-gap: 5%;
+    margin-left: auto;
+    margin-right: 10%;
+  } */
 }
 
 @media screen and (max-width: 768px) {
-  /*  .container {
-        grid-template-columns: repeat(2, 1fr);
-    } */
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   .nav-menu {
     display: none;
+  }
+  .container {
+    margin-right: 2rem;
   }
 }
 
 @media screen and (max-width: 320px) {
   .container {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .btn-container {
+    display: none;
+  }
+  .sub-menu h1 {
+    font-size: 2.8rem;
+  }
+  .sub-menu h2 {
+    font-size: 1.4rem;
+  }
+  .search-bar {
+    display: none;
+  }
+  .account {
+    display: none;
   }
 }
