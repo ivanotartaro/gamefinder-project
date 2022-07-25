@@ -32,7 +32,7 @@ const smallCard = function () {
   document.querySelector(".container");
   container.style.removeProperty("grid-template-columns");
   container.style.gridTemplateColumns = "repeat(3, 1fr)";
-  container.style.marginRight = "2rem";
+  container.style.marginRight = "1rem";
 
   document
     .querySelector(".big-card-view")
