@@ -1,355 +1,470 @@
-body {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    font-family: 'Exo', sans-serif;
-
-    --base-color: #fff;
-    --input-color: #939393;
-    --link-txt-color: #5FE19B;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow: hidden;
+  font-family: "Exo", sans-serif;
+
+  --base-color: #fff;
+  --input-color: #939393;
+  --link-txt-color: #5fe19b;
+}
 
 .logo-gamefinder {
-    position: absolute;
-    top: 10px;
-    margin: 2em 0 0 2em;
+  position: absolute;
+  margin: 3rem 0 0 3rem;
 }
 
-.login-page{
-    display: flex;
+.login-page {
+  display: flex;
 }
 
 .login-container {
-    position: absolute;
-    width: 462px;
-    height: 702px;
-    right: 10%;
-    top: 178px;
-    border-radius: 12px;
-    color: var(--base-color);
-    background-color: rgba(0, 0, 0, 0.5);
-    text-align: center;
-    align-items: center;
-
+  position: absolute;
+  width: 46.2rem;
+  height: 70.2rem;
+  right: 10%;
+  top: 15%;
+  left: auto;
+  border-radius: 12px;
+  color: var(--base-color);
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  align-items: center;
 }
 
 .login-container h2 {
-    margin: 40px 50px 8px 50px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 27px;
+  margin: 4rem 5rem 0.8rem 5rem;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.7rem;
 }
 
 .login-container h3 {
-    height: 28px;
-    left: 982px;
-    top: 253px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 21px;
+  height: 2.8rem;
+  left: 98.2rem;
+  top: 25.3rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
 }
 
 .email {
-    background: var(--base-color);
-    border-radius: 4px;
-    margin: 32px 50px 16px 50px;
-    height: 47px;
-    width: 362px;
-
-
+  background: var(--base-color);
+  border-radius: 4px;
+  margin: 3.2rem 5rem 1.6rem 5rem;
+  height: 4.7rem;
+  width: 36.2rem;
 }
 
 .email input {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 20px;
-    border: 0;
-    color: var(--input-color);
-    height: 25.85px;
-    width: 330px;
-    margin: 10.58px 16px 10.57px 0;
-    outline: 0;
-
+  font-family: "Exo", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  border: 0;
+  color: var(--input-color);
+  height: 2.585rem;
+  width: 33rem;
+  margin: 1.05rem 1.6rem 1.05rem 0;
+  outline: 0;
 }
 
 .password {
-    background: var(--base-color);
-    border-radius: 4px;
-    margin: 16px 50px 13px 50px;
-    height: 47px;
-    width: 362px;
+  background: var(--base-color);
+  border-radius: 4px;
+  margin: 1.6rem 5rem 1.3rem 5rem;
+  height: 4.7rem;
+  width: 36.2rem;
 }
 
 .password input {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 20px;
-    border: 0;
-    color: var(--input-color);
-    height: 25.85px;
-    width: 306px;
-    margin: 10.58px 60px 10.57px 0;
-    outline: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Exo", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  border: 0;
+  color: var(--input-color);
+  height: 2.585rem;
+  width: 30.6rem;
+  margin: 1.05rem 6rem 1.05rem 0;
+  outline: 0;
 }
 
 .password img {
-    width: 21.69px;
-    height: 16px;
-    margin-left: -45px;
-    cursor: pointer;
+  width: 2.17rem;
+  height: 1.6rem;
+  margin-left: -4.5rem;
+  cursor: pointer;
 }
 
 .checkbox-box {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    width: 362px;
-    margin: 16px 50px 13px 50px;
-    display: flex;
-    align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  width: 36.2rem;
+  margin: 1.6rem 5rem 1.3rem 5rem;
+  display: flex;
+  align-items: center;
 }
 
 input[type="checkbox"] {
-    appearance: none;
-    -webkit-appearance: none;
-    border: 1.5px solid #FFFFFF;
-    border-radius: 4px;
-    width: 20px;
-    height: 20px;
-    background-color: inherit;
-    margin-left: 1px;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1.5px solid #ffffff;
+  border-radius: 4px;
+  width: 2rem;
+  height: 2rem;
+  background-color: inherit;
+  margin-left: 1px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 input[type="checkbox"]:after {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f00c";
-    font-size: 15px;
-    color: #fff;
-    display: none;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00c";
+  font-size: 1.5rem;
+  color: #fff;
+  display: none;
 }
 
 input[type="checkbox"]:checked {
-    background-color: var(--link-txt-color);
+  background-color: var(--link-txt-color);
 }
 
 input[type="checkbox"]:checked:after {
-    display: block;
+  display: block;
 }
 
 .checkbox-box label {
-    cursor: pointer;
-    margin: 4px 0 0 16px;
+  cursor: pointer;
+  margin: 0.4rem 0 0 1.6rem;
 }
 
 .link-color {
-    text-decoration: none;
-    color: var(--link-txt-color);
-    margin-left: auto;
-    margin-top: auto;
+  text-decoration: none;
+  color: var(--link-txt-color);
+  margin-left: auto;
+  margin-top: auto;
 }
 
 .login-button {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 24px;
-    display: inline-block;
-    text-align: center;
-    color: var(--base-color);
-    background-color: var(--link-txt-color);
-    Width: 362px;
-    Height: 47px;
-    margin: 5px 50px 32px 50px;
-    border-radius: 6px;
-    cursor: pointer;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  display: inline-block;
+  text-align: center;
+  color: var(--base-color);
+  background-color: var(--link-txt-color);
+  width: 36.2rem;
+  height: 4.7rem;
+  margin: 0.5rem 5rem 3.2rem 5rem;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 .login-button:hover {
-    background-color: #4CC986;
+  background-color: #4cc986;
 }
 
 .register {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 19px;
-    margin: -8px 0 24px 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  margin: -0.8rem 0 2.4rem 0;
 }
 
 .register .link-color {
-    margin-left: 5px;
+  margin-left: 0.5rem;
 }
 
 .division {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .division-one,
 .division-two {
-    width: 147.44px;
-    height: 1px;
-    border: var(--base-color);
-    background-color: var(--base-color);
+  width: 14.7rem;
+  height: 1px;
+  border: var(--base-color);
+  background-color: var(--base-color);
 }
 
 .division-one {
-    margin: 10px 0 35px 40px;
+  margin: 1rem 0 3.5rem 4rem;
 }
 
 .division-two {
-    margin: 10px 40px 35px 0;
+  margin: 1rem 4rem 3.5rem 0;
 }
 
 .division a {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 19px;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
 }
 
 .login-apps {
-    display: grid;
-    margin: 0 50px 0 50px;
-
+  display: grid;
+  margin: 0 5rem 0 5rem;
 }
 
 .login-fb,
 .login-tw,
 .login-go {
-    width: 362px;
-    height: 47px;
-    border-radius: 6px;
-    border: 2px solid var(--base-color);
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 24px;
-    background-color: inherit;
-    color: var(--base-color);
-    cursor: pointer;
+  width: 36.2rem;
+  height: 4.7rem;
+  border-radius: 6px;
+  border: 2px solid var(--base-color);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  background-color: inherit;
+  color: var(--base-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .login-tw,
 .login-go {
-    margin: 18px 0 0 0;
+  margin: 1.8rem 0 0 0;
 }
 
-.fb-icon {
-    width: 20px;
-    height: 20px;
-    margin: 13px 14px 0 0;
-
-}
-
-.tw-icon {
-    width: 20px;
-    height: 20px;
-    margin: 13px 23px 0 0;
-    margin-left: -10px;
-}
-
+.fb-icon,
+.tw-icon,
 .go-icon {
-    width: 18px;
-    height: 18px;
-    margin: 13px 24px 0 -10px;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 8rem;
 }
 
+.app-txt {
+  margin-left: 1.5rem;
+}
 
 /********************** Carrousel **********************/
 
 .btn {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-    border: none;
-    border-radius: 50%;
-    z-index: 10;
-    cursor: pointer;
-    background-color: #515151;
-    font-size: 18px;
-    color: var(--base-color);
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  border-radius: 50%;
+  z-index: 10;
+  cursor: pointer;
+  background-color: #515151;
+  font-size: 2.1rem;
+  color: var(--base-color);
 }
 
 .btn:active {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .btn-prev {
-    top: 50%;
-    left: 2%;
+  top: 50%;
+  left: 2%;
 }
 
 .btn-next {
-    top: 50%;
-    right: 2%;
+  top: 50%;
+  right: 2%;
 }
 
 .background-pagination {
-    position: fixed;
-    left: 50%;
-    bottom: 2%;
-    text-align: center;
-    width: 120px;
-    height: 27px;
-    border-radius: 18px;
-    background-color: #515151;
-    z-index: 10;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
+  position: absolute;
+  left: 50%;
+  bottom: 2rem;
+  text-align: center;
+  width: 12rem;
+  height: 2.7rem;
+  border-radius: 1.8rem;
+  background-color: #515151;
+  z-index: 10;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .pagination-dot {
-    height: 7px;
-    width: 7px;
-    background-color: var(--base-color);
-    border-radius: 50%;
-    opacity: 0.25;
-    cursor: pointer;
+  height: 7px;
+  width: 7px;
+  background-color: var(--base-color);
+  border-radius: 50%;
+  opacity: 0.25;
+  cursor: pointer;
 }
 
 .pagination-dot.active {
-    opacity: 1;
+  opacity: 1;
 }
 
-
 .backgrounds {
-    min-height: 100%;
-    height: 1024px;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .background {
-    position: absolute;
-    width: 100%;
-    transition: 0.3s ease-in-out;
+  position: absolute;
+  width: 100%;
+  transition: 0.3s ease-in-out;
 }
 
 .background img {
-    height: 100vh;
-    display: block;
-    width: 100%;
-    object-fit: cover;
+  height: 100vh;
+  display: block;
+  width: 100%;
+  object-fit: cover;
 }
 
-/* @media screen and (max-width: 768px){
-    .background img {
-        height: 50vh;
-    }
-} */
+@media screen and (max-width: 768px) {
+  .login-page {
+    justify-content: center;
+  }
+
+  .logo-gamefinder {
+    margin-left: 0rem;
+  }
+
+  .login-container {
+    margin-right: 9%;
+    margin-top: 2%;
+  }
+
+  .background-pagination {
+    margin-left: -7%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .logo-gamefinder {
+    margin-left: 0;
+  }
+
+  .login-page {
+    justify-content: center;
+  }
+  .login-container {
+    margin: 0;
+    right: 0;
+    top: 11.5%;
+    width: 32rem;
+    height: 68rem;
+  }
+
+  .login-container h2 {
+    margin: 2rem 1rem 0.8rem 1rem;
+  }
+
+  .login-container h3 {
+    margin: 0 4.5rem 0.8rem 4.5rem;
+  }
+  .email {
+    margin: 3.2rem 2rem 1.6rem 2rem;
+    height: 4.7rem;
+    width: 28rem;
+    padding-left: 1rem;
+  }
+
+  .email input {
+    width: 27rem;
+  }
+
+  .password {
+    margin: 0 2rem 1.6rem 2rem;
+    height: 4.7rem;
+    width: 28rem;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .password input {
+    width: 27rem;
+  }
+
+  .password img {
+    margin-right: 1rem;
+  }
+
+  .checkbox-box {
+    width: 36.2rem;
+    margin: 1.6rem 0 1.3rem 2.1rem;
+  }
+
+  .checkbox-box label {
+    cursor: pointer;
+    margin: 0.4rem 0 0 1rem;
+  }
+
+  .forgot-txt {
+    margin-right: 8.5rem;
+  }
+
+  .login-button {
+    width: 28rem;
+    margin: 0.5rem 0.5rem 3.2rem 0rem;
+  }
+
+  .division-one,
+  .division-two {
+    width: 11.7rem;
+  }
+
+  .division-one {
+    margin: 1rem 0 3.5rem 1rem;
+  }
+
+  .division-two {
+    margin: 1rem 1rem 3.5rem 0;
+  }
+
+  .login-apps {
+    display: grid;
+    margin: 0 2rem 0 2rem;
+  }
+
+  .login-fb,
+  .login-tw,
+  .login-go {
+    width: 28rem;
+    font-size: 1.4rem;
+  }
+
+  .fb-icon,
+  .tw-icon,
+  .go-icon {
+    margin-left: 4rem;
+  }
+
+  .background-pagination {
+    display: none;
+  }
+
+  .btn {
+    display: none;
+  }
+}

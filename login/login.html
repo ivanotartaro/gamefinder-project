@@ -1,94 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
     <script type="text/javascript" src="login.js" defer></script>
     <title>Game Finder</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="login-page" id="login-page">
-        <div class="backgrounds">
-            <div class="background">
-                <img src="../assets/img/background-darkmode.png" alt="background-1" />
-            </div>
-            <div class="background">
-                <img src="../assets/img/background-darkmode-2.png" alt="background-2" />
-            </div>
-            <div class="background">
-                <img src="../assets/img/background-darkmode-3.png" alt="background-3" />
-            </div>
-            <div class="background">
-                <img src="../assets/img/background-darkmode-4.jpg" alt="background-4" />
-            </div>
-            <div class="background">
-                <img src="../assets/img/background-darkmode-5.jpg" alt="background-5" />
-            </div>
+      <div class="backgrounds">
+        <div class="background">
+          <img src="../assets/img/background-darkmode.png" alt="background-1" />
         </div>
-
-        <button id="btn-next" class="btn btn-next">></button>
-        <button id="btn-previous" class="btn btn-prev"><</button>
-
-        <div class="background-pagination">
-            <div class="pagination-dot active"></div>
-            <div class="pagination-dot"></div>
-            <div class="pagination-dot"></div>
-            <div class="pagination-dot"></div>
-            <div class="pagination-dot"></div>
+        <div class="background">
+          <img
+            src="../assets/img/background-darkmode-2.png"
+            alt="background-2"
+          />
         </div>
-
-
-        <img class="logo-gamefinder" src="../assets/img/logo-darkmode.svg" alt="Game Finder"/>
-        <div class="login-container">
-            <h2>Welcome! Log in or register</h2>
-            <h3>Log in to find the games you're looking for!</h3>
-            <form id="form">
-                <div id="email-wrapper" class="email">
-                    <input name="mail" type="text" placeholder="Email" required>
-                </div>
-                <div class="password">
-                    <input name="password" type="password" placeholder="Password">
-                    <img id="see-password" src="../assets/img/see-password.svg" alt="See password">
-                </div>
-                <div class="checkbox-box">
-                    <input type="checkbox" id="remember" name="remember">
-                    <label for="remember">Remember me</label>
-                    <a class="link-color" href="#">Forgot password?</a>
-                </div>
-                <input class="login-button" type="submit" value="Log In">
-            </form>
-            <div class="register">
-                Not registered yet?
-                <a class="link-color" href="#">Register now</a>
-            </div>
-            <div class="division">
-                <div class="division-one"></div>
-                or
-                <div class="division-two"></div>
-            </div>
-            <div class="login-apps">
-                <a class="login-fb">
-                    <img class="fb-icon" src="../assets/img/facebook-icon.svg" alt="Facebook">
-                    <span>Login with Facebook</span>
-                </a>
-                <a class="login-tw">
-                    <img class="tw-icon" src="../assets/img/twitter-icon.svg" alt="Twitter">
-                    <span>Login with Twitter</span>
-                </a>
-                <a class="login-go">
-                    <img class="go-icon" src="../assets/img/google-icon.svg" alt="Google">
-                    <span>Login with Google</span>
-                </a>
-            </div>
+        <div class="background">
+          <img
+            src="../assets/img/background-darkmode-3.png"
+            alt="background-3"
+          />
         </div>
+        <div class="background">
+          <img
+            src="../assets/img/background-darkmode-4.jpg"
+            alt="background-4"
+          />
+        </div>
+        <div class="background">
+          <img
+            src="../assets/img/background-darkmode-5.jpg"
+            alt="background-5"
+          />
+        </div>
+      </div>
+
+      <button id="btn-next" class="btn btn-next">></button>
+      <button id="btn-previous" class="btn btn-prev"><</button>
+
+      <div class="background-pagination">
+        <div class="pagination-dot active"></div>
+        <div class="pagination-dot"></div>
+        <div class="pagination-dot"></div>
+        <div class="pagination-dot"></div>
+        <div class="pagination-dot"></div>
+      </div>
+
+      <img
+        class="logo-gamefinder"
+        src="../assets/img/logo-darkmode.svg"
+        alt="Game Finder"
+      />
+      <div class="login-container">
+        <h2>Welcome! Log in or register</h2>
+        <h3>Log in to find the games you're looking for!</h3>
+        <form id="form">
+          <div id="email-wrapper" class="email">
+            <input name="mail" type="text" placeholder="Email" required />
+          </div>
+          <div class="password">
+            <input name="password" type="password" placeholder="Password" />
+            <img
+              id="see-password"
+              src="../assets/img/see-password.svg"
+              alt="See password"
+            />
+          </div>
+          <div class="checkbox-box">
+            <input type="checkbox" id="remember" name="remember" />
+            <label for="remember">Remember me</label>
+            <a class="link-color forgot-txt" href="#">Forgot password?</a>
+          </div>
+          <input class="login-button" type="submit" value="Log In" />
+        </form>
+        <div class="register">
+          Not registered yet?
+          <a class="link-color" href="#">Register now</a>
+        </div>
+        <div class="division">
+          <div class="division-one"></div>
+          or
+          <div class="division-two"></div>
+        </div>
+        <div class="login-apps">
+          <a class="login-fb">
+            <img
+              class="fb-icon"
+              src="../assets/img/facebook-icon.svg"
+              alt="Facebook"
+            />
+            <span class="app-txt">Login with Facebook</span>
+          </a>
+          <a class="login-tw">
+            <img
+              class="tw-icon"
+              src="../assets/img/twitter-icon.svg"
+              alt="Twitter"
+            />
+            <span class="app-txt">Login with Twitter</span>
+          </a>
+          <a class="login-go">
+            <img
+              class="go-icon"
+              src="../assets/img/google-icon.svg"
+              alt="Google"
+            />
+            <span class="app-txt">Login with Google</span>
+          </a>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
 
 <!-- Updated 05/06/2022 -->

@@ -184,6 +184,13 @@ body {
   line-height: 2.4rem;
 }
 
+.wrapper {
+  max-width: 144rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .nav-menu {
   height: auto;
   width: 18rem;
@@ -244,12 +251,6 @@ a:focus {
   color: #5fe19b;
 }
 
-.wrapper {
-  max-width: 144rem;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
 .container {
   height: auto;
   width: auto;
