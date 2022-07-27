@@ -7,9 +7,8 @@ const bigCard = function () {
     .forEach((game, index) => game.classList.add("hidden"));
 
   document.querySelector(".container");
-  container.style.removeProperty("grid-template-columns");
-  container.style.gridTemplateColumns = "repeat(1, 1fr)";
-  container.style.marginRight = "auto";
+  container.classList.remove("small-card-grid");
+  container.classList.add("big-card-grid");
 
   document
     .querySelector(".big-card-view")
@@ -30,9 +29,9 @@ const smallCard = function () {
     .forEach((game, index) => game.classList.remove("hidden"));
 
   document.querySelector(".container");
-  container.style.removeProperty("grid-template-columns");
-  container.style.gridTemplateColumns = "repeat(3, 1fr)";
-  container.style.marginRight = "1rem";
+
+  container.classList.remove("big-card-grid");
+  container.classList.add("small-card-grid");
 
   document
     .querySelector(".big-card-view")
@@ -47,3 +46,20 @@ const smallCard = function () {
 document.querySelector(".big-card-view").addEventListener("click", bigCard);
 
 document.querySelector(".small-card-view").addEventListener("click", smallCard);
+
+
+//LIGHT MODE
+
+
+const lightMode = function () {
+  document.querySelector(".main-page").classList.toggle("main-page-light");
+  document.querySelector(".sub-menu").classList.toggle("main-page-light");
+  document.querySelector(".nav-menu").classList.toggle("main-page-light");
+  document.querySelector(".container").classList.toggle("main-page-light");
+  document.querySelectorAll(".title-txt").forEach((txt, index) => txt.classList.toggle("main-page-light"));
+  document.querySelectorAll(".normal-txt").forEach((txt, index) => txt.classList.toggle("main-page-light"));
+
+  darkMode = false;
+};
+
+document.querySelector(".switch").addEventListener("click", lightMode);
