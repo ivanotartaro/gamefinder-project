@@ -8,7 +8,7 @@ const urlBaseGames =
   key +
   "&page=$page&page_size=$page_size";
 const urlBaseGame = "https://api.rawg.io/api/games/$game_id?key=" + key;
-const pageSize = 1; //tiene que ser 21
+const pageSize = 3; //tiene que ser 21
 let container;
 let ulResults;
 let gameRanking = 1;

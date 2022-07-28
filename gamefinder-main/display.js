@@ -47,17 +47,38 @@ document.querySelector(".big-card-view").addEventListener("click", bigCard);
 
 document.querySelector(".small-card-view").addEventListener("click", smallCard);
 
-
 //LIGHT MODE
-
 
 const lightMode = function () {
   document.querySelector(".main-page").classList.toggle("main-page-light");
   document.querySelector(".sub-menu").classList.toggle("main-page-light");
   document.querySelector(".nav-menu").classList.toggle("main-page-light");
   document.querySelector(".container").classList.toggle("main-page-light");
-  document.querySelectorAll(".title-txt").forEach((txt, index) => txt.classList.toggle("main-page-light"));
-  document.querySelectorAll(".normal-txt").forEach((txt, index) => txt.classList.toggle("main-page-light"));
+  document
+    .querySelectorAll(".title-txt")
+    .forEach((txt, index) => txt.classList.toggle("main-page-light"));
+  document
+    .querySelectorAll(".normal-txt")
+    .forEach((txt, index) => txt.classList.toggle("main-page-light"));
+
+  // SMALL CARD
+
+  document
+    .querySelectorAll(".small-card")
+    .forEach((sml, index) => sml.classList.toggle("card-light"));
+
+  document
+    .querySelectorAll(".platform-container")
+    .forEach((cnl, index) => cnl.classList.toggle("platform-container-light"));
+
+  // BIG CARD
+  document
+    .querySelectorAll(".big-card")
+    .forEach((bigc, index) => bigc.classList.toggle("card-light"));
+
+  document
+    .querySelectorAll(".big-platform-container")
+    .forEach((cnl, index) => cnl.classList.toggle("platform-container-light"));
 
   darkMode = false;
 };

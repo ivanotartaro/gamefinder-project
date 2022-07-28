@@ -1,52 +1,51 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Exo';
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
 }
 
-.container{
-    height: 1500px;
-    width: 1500px;
-    background-color: white;
- 
-
+body {
+  font-family: "Exo";
 }
 
-
-.modal{
-    margin: 100px;
-    height: 793px;
-    width: 1076px;
-
-
-  
-    
-    
-    background-color: #303030;
-
-  
-     background-image: url(/gamefinder-main/modal/assets/screen.png);
-   
-
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
-    
-    
-    border-radius: 24px;
-    
+.modal {
+  /*Medidas random*/
+  width: 80vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("https://cdn2.unrealengine.com/egs-biomutant-experiment101-g1a-00-1920x1080-7283d571f350.jpg");
+  background-size: cover;
+  background-position: inherit;
+  position: relative;
+  z-index: 0;
 }
 
-.modal-bot{
-    
-    height: 100%;
-    width: 100%;
-    margin-top: 0;
-    background: linear-gradient(180deg, rgba(48, 48, 48, 0.0001) 0%, #303030 84.4%);
+.modal::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: linear-gradient(
+    180deg,
+    rgba(48, 48, 48, 0.0001) 0%,
+    #303030 84.4%
+  );
+  z-index: -1;
+}
 
-    
+.container {
+  height: 1500px;
+  width: 1500px;
+  background-color: white;
+}
 
-    border-radius: 24px;
-   
-
+.modal {
+  margin: 100px;
+  height: 793px;
+  width: 1076px;
+  border-radius: 24px;
 }
