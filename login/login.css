@@ -24,7 +24,7 @@ body {
   display: flex;
 }
 
-.header{
+.header {
   position: absolute;
   width: 100%;
   display: flex;
@@ -34,7 +34,7 @@ body {
   margin: 3rem 0 0 3rem;
 }
 
-.darkmode-menu{
+.darkmode-menu {
   width: 14rem;
   margin-left: auto;
   margin-right: 5%;
@@ -44,13 +44,12 @@ body {
   align-items: center;
 }
 
-.dm-text{
+.dm-text {
   color: var(--base-color);
   font-weight: 400;
   font-size: 1.7rem;
   line-height: 2.7rem;
 }
-
 
 .login-container {
   position: absolute;
@@ -388,10 +387,11 @@ input[type="checkbox"]:checked:after {
 /* LIGHT MODE */
 
 .login-page-light {
-  color: #515151;
-  background-color: #e5e5e5;
+  color: #515151 !important;
+  background: #f0f0f0 !important;
+  backdrop-filter: blur(10px) !important;
+  border-color: #36b972 !important;
 }
-
 
 @media screen and (max-width: 320px) {
   .logo-gamefinder {

@@ -1,25 +1,31 @@
 * {
   padding: 0;
   margin: 0;
-  font-size: 16px;
+  font-size: 10px;
+  color: #ffffff;
 }
+
+/* rating_top */
 
 body {
   font-family: "Exo";
+  padding: 100px;
 }
 
 .modal {
   /*Medidas random*/
-  width: 80vw;
-  height: 50vh;
+  height: 79.3rem;
+  width: 107.6rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
   background: url("https://cdn2.unrealengine.com/egs-biomutant-experiment101-g1a-00-1920x1080-7283d571f350.jpg");
   background-size: cover;
   background-position: inherit;
   position: relative;
   z-index: 0;
+  border-radius: 24px;
+  padding: 2rem;
 }
 
 .modal::after {
@@ -29,23 +35,63 @@ body {
   width: 100%;
   height: 100%;
   content: "";
-  background: linear-gradient(
-    180deg,
-    rgba(48, 48, 48, 0.0001) 0%,
-    #303030 84.4%
-  );
+  background: linear-gradient(180deg, rgba(48, 48, 48, 0.0001) 0%, #303030 70%);
   z-index: -1;
-}
-
-.container {
-  height: 1500px;
-  width: 1500px;
-  background-color: white;
-}
-
-.modal {
-  margin: 100px;
-  height: 793px;
-  width: 1076px;
   border-radius: 24px;
+}
+
+.modal-header {
+  width: 100%;
+  height: 30%;
+  background-color: red;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.close-modal {
+  margin: 0 0 0 94%;
+  position: absolute;
+  cursor: pointer;
+}
+
+.modal-platform-container {
+  width: 20rem;
+  height: 10rem;
+  background-color: aquamarine;
+}
+
+.modal-title {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 64px;
+}
+
+.chips-container {
+  width: 36rem;
+  height: 5rem;
+  background-color: blueviolet;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chip-date,
+.rating-top,
+.ranking {
+  height: 2.8rem;
+  background-color: #ffffff;
+  width: 12.5rem;
+  border-radius: 6rem;
+  color: #303030;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ranking {
+  width: 9rem;
+}
+
+.modal-body {
+  background-color: blue;
 }
