@@ -17,14 +17,40 @@ body {
   --link-txt-color: #5fe19b;
 }
 
-.logo-gamefinder {
+.login-page {
+  width: 100%;
+  max-width: 144rem;
+  height: 1024px;
+  display: flex;
+}
+
+.header{
   position: absolute;
+  width: 100%;
+  display: flex;
+}
+
+.logo-gamefinder {
   margin: 3rem 0 0 3rem;
 }
 
-.login-page {
+.darkmode-menu{
+  width: 14rem;
+  margin-left: auto;
+  margin-right: 5%;
+  margin-top: 3rem;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.dm-text{
+  color: var(--base-color);
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 2.7rem;
+}
+
 
 .login-container {
   position: absolute;
@@ -346,7 +372,7 @@ input[type="checkbox"]:checked:after {
   }
 
   .logo-gamefinder {
-    margin-left: 0rem;
+    margin-left: 2rem;
   }
 
   .login-container {
@@ -359,9 +385,18 @@ input[type="checkbox"]:checked:after {
   }
 }
 
+/* LIGHT MODE */
+
+.login-page-light {
+  color: #515151;
+  background-color: #e5e5e5;
+}
+
+
 @media screen and (max-width: 320px) {
   .logo-gamefinder {
-    margin-left: 0;
+    width: 10rem;
+    height: auto;
   }
 
   .login-page {

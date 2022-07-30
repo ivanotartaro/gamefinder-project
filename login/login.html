@@ -16,6 +16,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
     <script type="text/javascript" src="login.js" defer></script>
+    <script type="text/javascript" src="light.js" defer></script>
     <title>Game Finder</title>
   </head>
   <body>
@@ -60,12 +61,17 @@
         <div class="pagination-dot"></div>
         <div class="pagination-dot"></div>
       </div>
-
-      <img
-        class="logo-gamefinder"
-        src="../assets/img/logo-darkmode.svg"
-        alt="Game Finder"
-      />
+      <header class="header">
+        <img
+          class="logo-gamefinder"
+          src="../assets/img/logo-darkmode.svg"
+          alt="Game Finder"
+        />
+        <div class="darkmode-menu">
+          <p class="dm-text">Dark mode</p>
+          <img class="switch" src="../assets/functionality/on.svg" alt="">
+      </div>
+      </header>  
       <div class="login-container">
         <h2>Welcome! Log in or register</h2>
         <h3>Log in to find the games you're looking for!</h3>

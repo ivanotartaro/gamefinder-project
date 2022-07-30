@@ -61,6 +61,11 @@ const lightMode = function () {
     .querySelectorAll(".normal-txt")
     .forEach((txt, index) => txt.classList.toggle("main-page-light"));
 
+  document.querySelector(".hamburger-menu").classList.toggle("main-page-light");
+  document
+    .querySelector(".close-hamburger")
+    .classList.toggle("platform-container-light");
+
   // SMALL CARD
 
   document
@@ -84,3 +89,19 @@ const lightMode = function () {
 };
 
 document.querySelector(".switch").addEventListener("click", lightMode);
+
+/* HAMBURGER MENU */
+
+const hamburgerMenu = function () {
+  document.querySelector(".hamburger-menu").classList.remove("hidden");
+};
+
+document.querySelector(".hamburger").addEventListener("click", hamburgerMenu);
+
+const closeHamburgerMenu = function () {
+  document.querySelector(".hamburger-menu").classList.add("hidden");
+};
+
+document
+  .querySelector(".close-hamburger")
+  .addEventListener("click", closeHamburgerMenu);

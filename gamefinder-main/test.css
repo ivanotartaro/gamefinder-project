@@ -47,6 +47,10 @@ body {
   position: static;
 }
 
+.hamburger-wrapper {
+  display: none;
+}
+
 .search-bar {
   width: 36.2rem;
   height: 4.7rem;
@@ -529,8 +533,8 @@ a:focus {
 /* LIGHTMODE */
 
 .main-page-light {
-  color: #515151;
-  background-color: #e5e5e5;
+  color: #515151 !important;
+  background-color: #e5e5e5 !important;
 }
 
 .card-light {
@@ -550,10 +554,11 @@ a:focus {
   .logo-gamefinder {
     display: none;
   }
-
   .main-menu {
-    justify-content: center;
-    margin: 0;
+    height: 7.8rem;
+  }
+  .search-bar {
+    margin-right: 19rem;
   }
   .account {
     display: none;
@@ -578,6 +583,110 @@ a:focus {
   .small-card-image {
     width: 35.1rem;
   }
+
+  /* HAMBURGER MENU */
+
+  .hamburger-wrapper {
+    display: flex;
+  }
+
+  .hamburger {
+    margin-left: 2rem;
+  }
+
+  .hamburger-menu {
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    z-index: 20;
+    background-color: #151515;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .menu-top {
+    display: flex;
+    width: 100%;
+    height: 7.8rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .close-hamburger {
+    width: 16.35px;
+    height: 16.33px;
+    margin-left: auto;
+    margin-right: 2rem;
+  }
+
+  .avatar {
+    background: #c4c4c4;
+    border: 2px solid #ffffff;
+    border-radius: 100%;
+    width: 4.9rem;
+    height: 4.8rem;
+    margin-left: 1rem;
+  }
+  .user-name {
+    font-weight: 800;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin-left: 1rem;
+    margin-top: -2rem;
+  }
+
+  .user {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    margin-left: -11.3rem;
+    margin-top: 1.5rem;
+  }
+
+  .division-line-one {
+    height: 1px;
+    width: 100%;
+    border: 1px solid #515151;
+    border-top: 2rem;
+  }
+
+  .hamburger-mid {
+    width: 100%;
+    height: 87%;
+    list-style-type: none;
+    padding-top: 4rem;
+  }
+  .hamburger-txt {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: inherit;
+    text-decoration: none;
+    margin-left: 1rem;
+  }
+
+  li {
+    margin-bottom: 40px;
+  }
+
+  .division-line-two {
+    height: 1px;
+    width: 100%;
+    border: 1px solid #515151;
+    border-top: 2rem;
+  }
+  .hamburger-bot {
+    display: flex;
+    align-items: center;
+    height: 4.5%;
+  }
+  .log-out {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-left: 1rem;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -600,12 +709,18 @@ a:focus {
   .account {
     display: none;
   }
-
+  .hamburger-menu {
+    width: 100vw;
+    height: 100vh;
+  }
+  .hamburger-mid {
+    height: 84%;
+  }
   /*   .small-card {
     width: 31.5rem;
     margin: auto;
   }
   .small-card-image {
-    width: 32rem;
+    width: 31rem;
   } */
 }
