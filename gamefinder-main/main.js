@@ -178,7 +178,7 @@ function formatGameName(name, maxLength) {
 function getHtmlRenderedGameSmallCard(game, gameRanking) {
   const genre = buildGenre(game.genres);
   const formattedGenre =
-    genre.length >= 30 ? genre.substring(0, 10) + "..." : genre;
+    genre.length >= 30 ? genre.substring(0, 20) + "..." : genre;
 
   const formattedName = formatGameName(game.name, 20);
 

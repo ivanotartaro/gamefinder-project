@@ -105,3 +105,25 @@ const closeHamburgerMenu = function () {
 document
   .querySelector(".close-hamburger")
   .addEventListener("click", closeHamburgerMenu);
+
+/* SEARCH DISPLAY IN MOBILE */
+
+const searchMobile = function () {
+  document.querySelector(".search-bar").style.display = "flex";
+};
+
+document
+  .querySelector(".search-icon-mobile")
+  .addEventListener("click", searchMobile);
+
+const closeSearchMobile = function () {
+  document.querySelector(".search-bar").style.display = "none";
+};
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") closeSearchMobile();
+});
+
+/* document
+  .querySelector(".search-icon-mobile")
+  .addEventListener("click", closeSearchMobile); */

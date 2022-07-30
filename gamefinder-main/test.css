@@ -40,6 +40,10 @@ body {
   z-index: 10;
 }
 
+.search-mobile {
+  display: none;
+}
+
 .logo-gamefinder {
   margin: 0 0 0 2rem;
   width: 26.7rem;
@@ -687,11 +691,16 @@ a:focus {
     line-height: 2rem;
     margin-left: 1rem;
   }
+
+  .hamburger-dm {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 320px) {
   .container {
     grid-template-columns: repeat(1, 1fr);
+    margin-top: 18rem;
   }
 
   .btn-container {
@@ -709,18 +718,129 @@ a:focus {
   .account {
     display: none;
   }
+  .hamburger {
+    margin-left: 0;
+  }
   .hamburger-menu {
     width: 100vw;
     height: 100vh;
+    margin-left: -2.1rem;
   }
   .hamburger-mid {
-    height: 84%;
+    height: 79%;
   }
-  /*   .small-card {
-    width: 31.5rem;
-    margin: auto;
+
+  .hamburger-bot {
+    display: grid;
+  }
+
+  .hamburger-dm {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid #515151;
+  }
+
+  .switch {
+    margin: 0 0 0 1rem;
+  }
+
+  .log-out {
+    margin-top: 1rem;
+  }
+
+  .small-card {
+    width: 28.8rem;
+    height: 33.2rem;
+    margin-left: 1.5rem;
   }
   .small-card-image {
-    width: 31rem;
-  } */
+    width: 28.8rem;
+  }
+
+  .platform-container {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    direction: ltr;
+    margin-top: 0rem;
+    margin-left: 0rem;
+  }
+
+  .small-card-bot {
+    display: grid;
+    justify-items: stretch;
+  }
+
+  .small-card-ranking {
+    margin: -4.8rem 0 0 25rem;
+  }
+
+  .release {
+    margin: 0rem 0 0 1rem;
+  }
+
+  .genres {
+    margin-top: 0rem;
+    margin-left: 1rem;
+  }
+
+  .release-date,
+  .genres-txt {
+    direction: rtl;
+    margin-right: 1rem;
+  }
+
+  .sub-menu {
+    margin-top: 7.8rem;
+
+    height: 10rem;
+  }
+  .logo-gamefinder {
+    display: flex;
+    height: 1.7rem;
+    width: 13.7rem;
+  }
+
+  .main-menu {
+    justify-content: space-around;
+  }
+
+  .search-mobile {
+    display: flex;
+  }
+
+  .search-bar {
+    width: 30rem;
+    height: 4.7rem;
+    margin-top: 14rem;
+    position: absolute;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .search-bar input {
+    width: 28rem;
+    height: 4.7rem;
+  }
+
+  .search-results {
+    width: 30rem;
+    height: 13rem;
+    margin-top: 1rem;
+    margin-left: 2.8rem;
+  }
+
+  .search-results li {
+    margin: 0.4rem;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .search-icon {
+    display: none;
+  }
 }
