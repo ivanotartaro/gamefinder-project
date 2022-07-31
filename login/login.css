@@ -229,7 +229,6 @@ input[type="checkbox"]:checked:after {
 .division-two {
   width: 14.7rem;
   height: 1px;
-  border: var(--base-color);
   background-color: var(--base-color);
 }
 
@@ -387,16 +386,32 @@ input[type="checkbox"]:checked:after {
 /* LIGHT MODE */
 
 .login-page-light {
-  color: #515151 !important;
-  background: #f0f0f0 !important;
-  backdrop-filter: blur(10px) !important;
-  border-color: #36b972 !important;
+  color: #515151;
+  background: #f0f0f0;
+  backdrop-filter: blur(10px);
+  border-color: #36b972;
+}
+
+.border-light {
+  border-color: #8f8f8f;
+}
+
+.login-app-light {
+  color: #36b972;
 }
 
 @media screen and (max-width: 320px) {
   .logo-gamefinder {
-    width: 10rem;
+    width: 20rem;
     height: auto;
+  }
+
+  .dm-text {
+    display: none;
+  }
+
+  .darkmode-menu {
+    width: 4rem;
   }
 
   .login-page {

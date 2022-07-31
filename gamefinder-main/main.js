@@ -22,8 +22,24 @@ const MAX_LAST_SEARCHES = 2;
 }
  */
 
+function parseJwt(token) {
+  let base64Url = token.split(".")[1];
+  let base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+  let jsonPayload = decodeURIComponent(
+    window
+      .atob(base64)
+      .split("")
+      .map(function (c) {
+        return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+      })
+      .join("")
+  );
+
+  return JSON.parse(jsonPayload);
+}
+
 const ATTR_LAST_SEARCHES =
-  window.localStorage.getItem(ATTR_AT) + "LASTSEARCHES";
+  parseJwt(window.localStorage.getItem(ATTR_AT)).email + "_LASTSEARCHES";
 
 window.onload = function () {
   iniciarLastSearches();
@@ -56,7 +72,7 @@ window.onload = function () {
       return;
     }
 
-    // Ignorar modifiers 'Alt', 'Ctrl', etc...
+    // Ignore modifiers 'Alt', 'Ctrl', etc...
     /*if (e.key.length !== 1 && e.key !== 'Backspace') {
       return;
     }*/
@@ -138,7 +154,7 @@ function selectAutocompleteGame(gameName) {
 
 function saveSearch(lastSearch) {
   lastSearch.then((games) => {
-    // Si hay al menos un resultado en la búsqueda, la guardo
+    // save if there is at least one result in search
     if (games) {
       arrayLastSearches.unshift(games);
       window.localStorage.setItem(
@@ -195,7 +211,6 @@ function appendNewGames(promiseGames) {
   promiseGames.then((games) => {
     if (games) {
       games.forEach((game) => {
-        //container.append(getHtmlRenderedGameCard(game)); //changes here
         container.append(getHtmlRenderedGameSmallCard(game, gameRanking));
         container.append(getHtmlRenderedGameBigCard(game, gameRanking));
         gameRanking++;
