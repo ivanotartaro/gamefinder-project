@@ -14,12 +14,19 @@ let ulResults;
 let gameRanking = 1;
 let scrolleableResults = true;
 let modoSmall = true;
+const arrayLastSearches = [];
+const MAX_LAST_SEARCHES = 2;
 
 /* if (!window.localStorage.getItem(ATTR_AT)) {
     window.location.href = '../login/login.html';
 }
  */
+
+const ATTR_LAST_SEARCHES =
+  window.localStorage.getItem(ATTR_AT) + "LASTSEARCHES";
+
 window.onload = function () {
+  iniciarLastSearches();
   container = document.getElementById("container");
   ulResults = document.querySelector(".search-results");
 
@@ -31,6 +38,28 @@ window.onload = function () {
       searchGames();
       return;
     }
+
+    if (e.key === "Escape") {
+      const mediaQuery = window.matchMedia("max-width: 320px");
+
+      if (mediaQuery) {
+        ulResults.innerHTML = "";
+        ulResults.style.display = "none";
+        document.querySelector("input[name=search-filter]").value = "";
+        document
+          .querySelector(".search-bar")
+          .classList.remove("mobile-visible");
+      } else {
+        ulResults.innerHTML = "";
+        ulResults.style.display = "none";
+      }
+      return;
+    }
+
+    // Ignorar modifiers 'Alt', 'Ctrl', etc...
+    /*if (e.key.length !== 1 && e.key !== 'Backspace') {
+      return;
+    }*/
 
     if (searchTerm) {
       getGames(1, 4, false).then((result) => {
@@ -56,6 +85,7 @@ window.onload = function () {
         }
       });
     } else {
+      ulResults.innerHTML = "";
       ulResults.style.display = "none";
     }
   };
@@ -72,6 +102,23 @@ window.onload = function () {
   appendNewGames(getGames(pagina++, pageSize));
 };
 
+function iniciarLastSearches() {
+  arrayLastSearches.unshift = function () {
+    if (this.length >= MAX_LAST_SEARCHES) {
+      this.pop();
+    }
+    return Array.prototype.unshift.apply(this, arguments);
+  };
+
+  if (window.localStorage.getItem(ATTR_LAST_SEARCHES)) {
+    JSON.parse(window.localStorage.getItem(ATTR_LAST_SEARCHES)).forEach(
+      (savedSearch, index) => {
+        arrayLastSearches.unshift(savedSearch);
+      }
+    );
+  }
+}
+
 function selectAutocompleteGame(gameName) {
   pagina = 1;
   gameRanking = 1;
@@ -82,7 +129,24 @@ function selectAutocompleteGame(gameName) {
 
   document.querySelector("input[name=search-filter]").value = gameName;
 
-  appendNewGames(getGames(pagina++, pageSize, true));
+  const selectedSearchSuggestionResult = getGames(pagina++, pageSize, true);
+
+  saveSearch(selectedSearchSuggestionResult);
+
+  appendNewGames(selectedSearchSuggestionResult);
+}
+
+function saveSearch(lastSearch) {
+  lastSearch.then((games) => {
+    // Si hay al menos un resultado en la búsqueda, la guardo
+    if (games) {
+      arrayLastSearches.unshift(games);
+      window.localStorage.setItem(
+        ATTR_LAST_SEARCHES,
+        JSON.stringify(arrayLastSearches)
+      );
+    }
+  });
 }
 
 function searchGames() {
@@ -281,7 +345,7 @@ const PLATFORMS = [
       "</svg>",
   },
   {
-    name: "Xbox",
+    name: "Nintendo Switch",
     logo:
       '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
       '     <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8608 24H14.1696C14.0755 24 14.0001 23.9245 14.0001 23.8302V0.150943C14.0001 0.0754717 14.0566 0 14.1508 0H17.8608C21.2506 0 24.0001 2.75472 24.0001 6.15094V17.8491C24.0001 21.2453 21.2506 24 17.8608 24ZM21.1564 13.2076C21.1564 11.8679 20.0641 10.7736 18.727 10.7736C17.3899 10.7736 16.3165 11.8679 16.2976 13.2076C16.2976 14.5472 17.3899 15.6415 18.727 15.6415C20.0641 15.6415 21.1564 14.5472 21.1564 13.2076Z" fill="#FFFFFF"/>\n' +

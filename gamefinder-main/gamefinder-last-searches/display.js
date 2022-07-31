@@ -12,10 +12,10 @@ const bigCard = function () {
 
   document
     .querySelector(".big-card-view")
-    .setAttribute("src", "../assets/functionality/gallery-active.svg");
+    .setAttribute("src", "../../assets/functionality/gallery-active.svg");
   document
     .querySelector(".small-card-view")
-    .setAttribute("src", "../assets/functionality/thumbnails-disabled.svg");
+    .setAttribute("src", "../../assets/functionality/thumbnails-disabled.svg");
 
   modoSmall = false;
 };
@@ -35,10 +35,10 @@ const smallCard = function () {
 
   document
     .querySelector(".big-card-view")
-    .setAttribute("src", "../assets/functionality/gallery-disabled.svg");
+    .setAttribute("src", "../../assets/functionality/gallery-disabled.svg");
   document
     .querySelector(".small-card-view")
-    .setAttribute("src", "../assets/functionality/thumbnails-active.svg");
+    .setAttribute("src", "../../assets/functionality/thumbnails-active.svg");
 
   modoSmall = true;
 };
@@ -85,61 +85,7 @@ const lightMode = function () {
     .querySelectorAll(".big-platform-container")
     .forEach((cnl, index) => cnl.classList.toggle("platform-container-light"));
 
-  document.querySelectorAll(".switch").forEach((elem,idx) => elem.classList.toggle("switch-hidden"));
-
   darkMode = false;
 };
 
-document.querySelector("#switch-on").addEventListener("click", lightMode);
-document.querySelector("#switch-off").addEventListener("click", lightMode);
-
-/* HAMBURGER MENU */
-
-const hamburgerMenu = function () {
-  document.querySelector(".hamburger-menu").classList.remove("hidden");
-};
-
-document.querySelector(".hamburger").addEventListener("click", hamburgerMenu);
-
-const closeHamburgerMenu = function () {
-  document.querySelector(".hamburger-menu").classList.add("hidden");
-};
-
-document
-  .querySelector(".close-hamburger")
-  .addEventListener("click", closeHamburgerMenu);
-
-/* SEARCH DISPLAY IN MOBILE */
-
-const searchMobile = function () {
-  //document.querySelector(".search-bar").style.display = "flex";
-  let classListSearchBar = document.querySelector(".search-bar").classList;
-  classListSearchBar.toggle('mobile-visible');
-
-
-  if (!classListSearchBar.contains('mobile-visible')) {
-    document.querySelector("input[name=search-filter]").value = '';
-    document.querySelector(".search-results").innerHTML = '';
-    document.querySelector(".search-results").style.display = "none";
-  } else {
-    document.querySelector("input[name=search-filter]").focus();
-  }
-
-};
-
-document
-  .querySelector(".search-icon-mobile")
-  .addEventListener("click", searchMobile);
-
-/*const closeSearchMobile = function () {
-  //document.querySelector(".search-bar").style.display = "none";
-  document.querySelector(".search-bar").classList.remove('mobile-visible');
-};
-
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape") closeSearchMobile();
-});*/
-
-/* document
-  .querySelector(".search-icon-mobile")
-  .addEventListener("click", closeSearchMobile); */
+document.querySelector(".switch").addEventListener("click", lightMode);

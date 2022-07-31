@@ -173,12 +173,22 @@ body {
   display: flex;
 }
 
-.switch {
+.switch-container {
   width: 4.4rem;
   height: 2.2rem;
   margin-left: 1.5rem;
   margin-top: 1.5rem;
+}
+
+.switch-container img {
+  position:absolute;
   cursor: pointer;
+  opacity:1;
+  transition:opacity 0.2s linear;
+}
+
+.switch-container img.switch-hidden {
+  opacity: 0;
 }
 
 .dm-text {
@@ -715,6 +725,11 @@ a:focus {
   .search-bar {
     display: none;
   }
+
+  .search-bar.mobile-visible {
+    display: flex;
+  }
+
   .account {
     display: none;
   }
