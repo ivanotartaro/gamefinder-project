@@ -28,10 +28,12 @@ This web app is used to search for games and have information about them.
 - Show a column of one game or change it back to three with a toggle.
 - Last searches.
 
+## (This is the most stable version of the web app).
+
 ## To do list:
 
 - Light mode in login. Got some problems implementing it the way a wanted. Maybe it is a bad approach or maybe the design I made (my first ever webpage [and I'm pretty proud about it]) is too hard coded and static.
-- Modal to show details of selected game. Got the structure and style, but is not properly working, it's under development in "feature" branch.
+- Modal. Got the structure, style and functionality, but is not properly working, it's under development in "develop" branch.
 - Search by console.
 - Improve accessibility.
 - Page optimization.
