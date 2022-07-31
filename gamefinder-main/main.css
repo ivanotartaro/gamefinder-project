@@ -181,10 +181,10 @@ body {
 }
 
 .switch-container img {
-  position:absolute;
+  position: absolute;
   cursor: pointer;
-  opacity:1;
-  transition:opacity 0.2s linear;
+  opacity: 1;
+  transition: opacity 0.2s linear;
 }
 
 .switch-container img.switch-hidden {
@@ -308,6 +308,7 @@ a:focus {
   margin: 5px;
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 
 .small-card-image {
@@ -407,6 +408,7 @@ a:focus {
   background-color: #303030;
   position: relative;
   margin-bottom: 2rem;
+  cursor: pointer;
 }
 
 .big-card-top {
@@ -821,6 +823,7 @@ a:focus {
 
   .main-menu {
     justify-content: space-around;
+    width: 32rem;
   }
 
   .search-mobile {
