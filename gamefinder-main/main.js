@@ -121,8 +121,15 @@ window.onload = function () {
 
   // MODAL
   document.querySelector(".close-modal").onclick = () => {
-    document.querySelector(".modal").style.display = "none";
+    document.querySelector(".modal-wrapper").style.display = "none";
   };
+
+  window.onclick = function(event) {
+    let modal = document.querySelector(".modal-wrapper");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
 };
 
 function iniciarLastSearches() {
@@ -259,8 +266,8 @@ function buildModalPlatforms(parent_platforms) {
     .map((p) => p.platform)
     .map((p) => p.name)
     .reduce((platformList, platform) => {
-      return platformList + ", " + platform;
-    }, "");
+      return platformList + platform + ', ';
+    }, "").slice(0, -2);;
 }
 
 function formatGameName(name, maxLength) {
@@ -270,6 +277,7 @@ function formatGameName(name, maxLength) {
 }
 
 function openModal(game) {
+  let modalWrapper = document.querySelector(".modal-wrapper");
   let modal = document.querySelector(".modal");
 
   const gameId = game.querySelector(".game-id").value;
@@ -305,7 +313,7 @@ function openModal(game) {
 
     modal.querySelector(".web-info.data-txt").innerHTML = game.website;
 
-    modal.style.display = "flex";
+    modalWrapper.style.display = "flex";
   });
 }
 
@@ -372,6 +380,8 @@ function getHtmlRenderedGameBigCard(game, gameRanking) {
 
   bigCardGame.querySelector(".big-game-title").innerHTML = formattedName;
   bigCardGame.querySelector(".big-game-title").title = game.name;
+
+  bigCardGame.querySelector(".game-id").value = game.id;
 
   bigCardGame.querySelector(".big-card-ranking").innerHTML = "#" + gameRanking;
 

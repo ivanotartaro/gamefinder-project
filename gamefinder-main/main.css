@@ -408,6 +408,7 @@ a:focus {
   background-color: #303030;
   position: relative;
   margin-bottom: 2rem;
+  cursor: pointer;
 }
 
 .big-card-top {

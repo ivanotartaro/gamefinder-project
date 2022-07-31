@@ -150,7 +150,8 @@
                     <!-- BIG CARD -->
 
                     <template id="game-template-big">
-                        <div class="big-card  hidden">
+                        <div class="big-card  hidden" onclick="openModal(this);">
+                            <input type="hidden" class="game-id">
                             <div class="big-card-top">
                                 <img class="big-card-fav" src="../assets/img/fav.svg" alt="">
                                 <div class="big-card-image"></div>
@@ -167,79 +168,81 @@
                         </div>
                     </template>
 
-                    <div class="modal">
-                        <div class="modal-header">
-                            <div class="close-modal">
-                                <img
-                                        src="../../assets/functionality/close.svg"
-                                        class="close-modal-btn"
-                                />
-                            </div>
-                            <div class="modal-platform-container"></div>
-                            <p class="modal-title"></p>
-                            <div class="chips-container">
-                                <p class="chip-date"></p>
-                                <p class="rating-top"></p>
-                                <p class="ranking"></p>
-                            </div>
-                        </div>
-                        <div class="modal-body">
-                            <div class="modal-information">
-                                <p class="modal-description">
-                                </p>
-                                <div class="modal-buttons">
-                                    <button class="btn-wish">Add to wishlist ❤</button>
-                                    <button class="btn-purchase">Purchase</button>
+                    <div class="modal-wrapper overlay">
+                        <div class="modal">
+                            <div class="modal-header">
+                                <div class="close-modal">
+                                    <img
+                                            src="../../assets/functionality/close.svg"
+                                            class="close-modal-btn"
+                                    />
                                 </div>
-                                <div class="modal-data">
-                                    <section class="section-a">
-                                        <div class="modal-platforms">
-                                            <p class="data-title">Platform</p>
-                                            <p class="platform-info data-txt"></p>
-                                        </div>
-                                        <div class="modal-release">
-                                            <p class="data-title">Release date</p>
-                                            <p class="date-info data-txt"></p>
-                                        </div>
-                                        <div class="modal-publisher">
-                                            <p class="data-title">Publisher</p>
-                                            <p class="publisher-info data-txt"></p>
-                                        </div>
-                                        <div class="modal-website">
-                                            <p class="data-title">Website</p>
-                                            <p class="web-info data-txt"></p>
-                                        </div>
-                                    </section>
-                                    <section class="section-b">
-                                        <div class="modal-genre">
-                                            <p class="data-title">Genre</p>
-                                            <p class="genre-name data-txt"></p>
-                                        </div>
-                                        <div class="modal-developer">
-                                            <p class="data-title">Developer</p>
-                                            <p class="developer-name data-txt"></p>
-                                        </div>
-                                        <div class="modal-age">
-                                            <p class="data-title">Age rating</p>
-                                            <p class="age-name data-txt"></p>
-                                        </div>
-                                        <div class="modal-icons">
-                                            <img
-                                                    src="../../assets/icons/Chat Bubbles.svg"
-                                                    class="modal-chat"
-                                            />
-                                            <img
-                                                    src="../../assets/icons/Thumbs Up.svg"
-                                                    class="modal-thumbs"
-                                            />
-                                            <img src="../../assets/icons/Action.svg" class="modal-action" />
-                                        </div>
-                                    </section>
+                                <div class="modal-platform-container"></div>
+                                <p class="modal-title"></p>
+                                <div class="chips-container">
+                                    <p class="chip-date"></p>
+                                    <p class="rating-top"></p>
+                                    <p class="ranking"></p>
                                 </div>
                             </div>
-                            <div class="modal-media">
-                                <div class="modal-video"></div>
-                                <div class="modal-photos"></div>
+                            <div class="modal-body">
+                                <div class="modal-information">
+                                    <p class="modal-description">
+                                    </p>
+                                    <div class="modal-buttons">
+                                        <button class="btn-wish">Add to wishlist ❤</button>
+                                        <button class="btn-purchase">Purchase</button>
+                                    </div>
+                                    <div class="modal-data">
+                                        <section class="section-a">
+                                            <div class="modal-platforms">
+                                                <p class="data-title">Platform</p>
+                                                <p class="platform-info data-txt"></p>
+                                            </div>
+                                            <div class="modal-release">
+                                                <p class="data-title">Release date</p>
+                                                <p class="date-info data-txt"></p>
+                                            </div>
+                                            <div class="modal-publisher">
+                                                <p class="data-title">Publisher</p>
+                                                <p class="publisher-info data-txt"></p>
+                                            </div>
+                                            <div class="modal-website">
+                                                <p class="data-title">Website</p>
+                                                <p class="web-info data-txt"></p>
+                                            </div>
+                                        </section>
+                                        <section class="section-b">
+                                            <div class="modal-genre">
+                                                <p class="data-title">Genre</p>
+                                                <p class="genre-name data-txt"></p>
+                                            </div>
+                                            <div class="modal-developer">
+                                                <p class="data-title">Developer</p>
+                                                <p class="developer-name data-txt"></p>
+                                            </div>
+                                            <div class="modal-age">
+                                                <p class="data-title">Age rating</p>
+                                                <p class="age-name data-txt"></p>
+                                            </div>
+                                            <div class="modal-icons">
+                                                <img
+                                                        src="../../assets/icons/Chat Bubbles.svg"
+                                                        class="modal-chat"
+                                                />
+                                                <img
+                                                        src="../../assets/icons/Thumbs Up.svg"
+                                                        class="modal-thumbs"
+                                                />
+                                                <img src="../../assets/icons/Action.svg" class="modal-action" />
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                                <div class="modal-media">
+                                    <div class="modal-video"></div>
+                                    <div class="modal-photos"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
