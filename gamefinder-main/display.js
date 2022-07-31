@@ -85,12 +85,14 @@ const lightMode = function () {
     .querySelectorAll(".big-platform-container")
     .forEach((cnl, index) => cnl.classList.toggle("platform-container-light"));
 
-  document.querySelectorAll(".switch").forEach((elem,idx) => elem.classList.toggle("switch-hidden"));
+  document
+    .querySelectorAll(".switch")
+    .forEach((elem, idx) => elem.classList.toggle("switch-hidden"));
 
   darkMode = false;
 };
 
-document.querySelector("#switch-on").addEventListener("click", lightMode);
+document.querySelector(".switch").addEventListener("click", lightMode);
 document.querySelector("#switch-off").addEventListener("click", lightMode);
 
 /* HAMBURGER MENU */
@@ -114,17 +116,15 @@ document
 const searchMobile = function () {
   //document.querySelector(".search-bar").style.display = "flex";
   let classListSearchBar = document.querySelector(".search-bar").classList;
-  classListSearchBar.toggle('mobile-visible');
+  classListSearchBar.toggle("mobile-visible");
 
-
-  if (!classListSearchBar.contains('mobile-visible')) {
-    document.querySelector("input[name=search-filter]").value = '';
-    document.querySelector(".search-results").innerHTML = '';
+  if (!classListSearchBar.contains("mobile-visible")) {
+    document.querySelector("input[name=search-filter]").value = "";
+    document.querySelector(".search-results").innerHTML = "";
     document.querySelector(".search-results").style.display = "none";
   } else {
     document.querySelector("input[name=search-filter]").focus();
   }
-
 };
 
 document

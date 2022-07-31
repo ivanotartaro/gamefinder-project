@@ -8,7 +8,7 @@ const urlBaseGames =
   key +
   "&page=$page&page_size=$page_size";
 const urlBaseGame = "https://api.rawg.io/api/games/$game_id?key=" + key;
-const pageSize = 1; //tiene que ser 21
+const pageSize = 21;
 let container;
 let ulResults;
 let gameRanking = 1;
@@ -17,10 +17,12 @@ let modoSmall = true;
 const arrayLastSearches = [];
 const MAX_LAST_SEARCHES = 2;
 
-/* if (!window.localStorage.getItem(ATTR_AT)) {
-    window.location.href = '../login/login.html';
+// Access to main only if logged in
+if (!window.localStorage.getItem(ATTR_AT)) {
+  window.location.href = "../login/login.html";
 }
- */
+
+// Last searches stores by user
 
 function parseJwt(token) {
   let base64Url = token.split(".")[1];
@@ -110,10 +112,13 @@ window.onload = function () {
     searchGames();
   };
 
-  document.querySelector(".log-out").onclick = () => {
-    window.localStorage.removeItem(ATTR_AT);
-    window.location.href = "../login/login.html";
-  };
+  document.querySelectorAll(".log-out").forEach(
+    (clo, index) =>
+      (clo.onclick = () => {
+        window.localStorage.removeItem(ATTR_AT);
+        window.location.href = "../login/login.html";
+      })
+  );
 
   appendNewGames(getGames(pagina++, pageSize));
 };
