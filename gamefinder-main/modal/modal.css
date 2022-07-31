@@ -5,27 +5,27 @@
   color: #ffffff;
 }
 
-/* rating_top */
-
 body {
   font-family: "Exo";
-  padding: 100px;
 }
 
 .modal {
-  /*Medidas random*/
   height: 79.3rem;
   width: 107.6rem;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   flex-direction: column;
   background: url("https://cdn2.unrealengine.com/egs-biomutant-experiment101-g1a-00-1920x1080-7283d571f350.jpg");
   background-size: cover;
   background-position: inherit;
-  position: relative;
-  z-index: 0;
+  position: absolute;
+  z-index: 200;
   border-radius: 24px;
   padding: 2rem;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .modal::after {
@@ -57,14 +57,13 @@ body {
 .modal-platform-container {
   width: 20rem;
   height: 10rem;
-
   margin-top: 10rem;
 }
 
 .modal-title {
   font-weight: 800;
-  font-size: 48px;
-  line-height: 64px;
+  font-size: 4.8rem;
+  line-height: 6.4rem;
 }
 
 .chips-container {
@@ -101,16 +100,21 @@ body {
 }
 
 .modal-information {
-  width: 50%;
+  width: 70%;
   height: 100%;
 }
 
 .modal-description {
+  height: 15rem;
+  overflow: auto;
+  margin-bottom: 1rem;
+}
+
+.modal-description p {
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 2.2rem;
-  height: 15rem;
 }
 
 .modal-buttons {
@@ -182,7 +186,6 @@ body {
 }
 
 .modal-media {
-  background-color: antiquewhite;
   width: 100%;
   height: 95%;
   padding: 2rem;
@@ -191,12 +194,68 @@ body {
 .modal-video {
   width: 100%;
   height: 50%;
-  background-color: blueviolet;
   margin-top: -2rem;
 }
 
 .modal-photos {
   width: 100%;
   height: 50%;
-  background-color: darkcyan;
+}
+
+/* .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 30;
+} */
+
+@media screen and (max-width: 768px) {
+  .modal {
+    width: 72rem;
+    height: 98rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .modal {
+    width: 32rem;
+    height: 157rem;
+    border-radius: 0px;
+  }
+
+  .modal-header {
+    width: 30rem;
+    height: 10rem;
+  }
+
+  .close-modal {
+    margin: 0 0 0 0;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .modal-title {
+    font-weight: 800;
+    font-size: 3rem;
+    line-height: 6.4rem;
+    margin-top: 3rem;
+  }
+
+  .modal-platform-container {
+    display: none;
+  }
+
+  .chips-container {
+    display: none;
+  }
+
+  .modal-information {
+    width: 30rem;
+    height: 100%;
+  }
 }

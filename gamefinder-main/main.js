@@ -22,6 +22,8 @@ const MAX_LAST_SEARCHES = 2;
 }
  */
 
+// Last searches stores by user
+
 function parseJwt(token) {
   let base64Url = token.split(".")[1];
   let base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
@@ -116,6 +118,11 @@ window.onload = function () {
   };
 
   appendNewGames(getGames(pagina++, pageSize));
+
+  // MODAL
+  document.querySelector(".close-modal").onclick = () => {
+    document.querySelector(".modal").style.display = "none";
+  };
 };
 
 function iniciarLastSearches() {
@@ -154,7 +161,7 @@ function selectAutocompleteGame(gameName) {
 
 function saveSearch(lastSearch) {
   lastSearch.then((games) => {
-    // save if there is at least one result in search
+    // if at least one result in list, save it
     if (games) {
       arrayLastSearches.unshift(games);
       window.localStorage.setItem(
@@ -211,6 +218,7 @@ function appendNewGames(promiseGames) {
   promiseGames.then((games) => {
     if (games) {
       games.forEach((game) => {
+        //container.append(getHtmlRenderedGameCard(game)); //changes here
         container.append(getHtmlRenderedGameSmallCard(game, gameRanking));
         container.append(getHtmlRenderedGameBigCard(game, gameRanking));
         gameRanking++;
@@ -246,10 +254,59 @@ function buildPlatforms(parent_platforms) {
     }, "");
 }
 
+function buildModalPlatforms(parent_platforms) {
+  return parent_platforms
+    .map((p) => p.platform)
+    .map((p) => p.name)
+    .reduce((platformList, platform) => {
+      return platformList + ", " + platform;
+    }, "");
+}
+
 function formatGameName(name, maxLength) {
   return name.length >= maxLength
     ? name.substring(0, maxLength - 3) + "..."
     : name;
+}
+
+function openModal(game) {
+  let modal = document.querySelector(".modal");
+
+  const gameId = game.querySelector(".game-id").value;
+  getGame(gameId).then((game) => {
+    modal.style.background = "url(" + game.background_image + ")";
+
+    modal.querySelector(".modal-title").innerHTML = game.name;
+    modal.querySelector(".modal-description").innerHTML = game.description;
+    modal.querySelector(".platform-info.data-txt").innerHTML =
+      buildModalPlatforms(game.parent_platforms);
+    modal.querySelector(".date-info.data-txt").innerHTML = game.released;
+    modal.querySelector(".chip-date").innerHTML = game.released;
+    modal.querySelector(".rating-top").innerHTML = game.rating_top;
+    modal.querySelector(".rating-top").innerHTML = game.rating_top;
+
+    const developers = game.developers
+      .map((p) => p.name)
+      .reduce((developer, result) => result + developer, ", ")
+      .slice(0, -2);
+    modal.querySelector(".developer-name.data-txt").innerHTML = developers;
+
+    const publishers = game.publishers
+      .map((p) => p.name)
+      .reduce((publisher, result) => result + publisher, ", ")
+      .slice(0, -2);
+    modal.querySelector(".publisher-info.data-txt").innerHTML = publishers;
+
+    modal.querySelector(".genre-name.data-txt").innerHTML = buildGenre(
+      game.genres
+    );
+
+    modal.querySelector(".age-name.data-txt").innerHTML = game.esrb_rating.name;
+
+    modal.querySelector(".web-info.data-txt").innerHTML = game.website;
+
+    modal.style.display = "flex";
+  });
 }
 
 // SMALL
@@ -275,6 +332,8 @@ function getHtmlRenderedGameSmallCard(game, gameRanking) {
 
   smallCardGame.querySelector(".game-title").innerHTML = formattedName;
   smallCardGame.querySelector(".game-title").title = game.name;
+
+  smallCardGame.querySelector(".game-id").value = game.id;
 
   smallCardGame.querySelector(".small-card-ranking").innerHTML =
     "#" + gameRanking;
